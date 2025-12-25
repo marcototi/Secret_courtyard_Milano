@@ -1,0 +1,36 @@
+{
+  "defaults": {
+    "timeout": 30000,
+    "threshold": 5,
+    "standard": "WCAG2AA",
+    "ignore": [
+      "notice",
+      "warning"
+    ],
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--headless"]
+    }
+  },
+  "urls": [
+    {
+      "url": "http://localhost:8080/index.html",
+      "screenCapture": "pa11y-screenshots/home.png"
+    },
+    {
+      "url": "http://localhost:8080/pages/la-casa.html",
+      "screenCapture": "pa11y-screenshots/la-casa.png"
+    },
+    {
+      "url": "http://localhost:8080/pages/mobilita.html",
+      "screenCapture": "pa11y-screenshots/mobilita.png"
+    },
+    {
+      "url": "http://localhost:8080/pages/scopri-milano.html",
+      "screenCapture": "pa11y-screenshots/scopri-milano.png"
+    },
+    {
+      "url": "http://localhost:8080/pages/la-ristrutturazione.html",
+      "screenCapture": "pa11y-screenshots/la-ristrutturazione.png"
+    }
+  ]
+}

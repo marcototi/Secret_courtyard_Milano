@@ -1,0 +1,22 @@
+/*
+ * Secret Courtyard Milano - Fonts
+ * Modulo CSS estratto da base.css
+ */
+
+/* Ottimizzazione font-display per caricamento non bloccante */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300 400 500 600;
+    font-display: swap;
+    src: local('Inter'), local('Inter-Regular');
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: local('Playfair Display'), local('PlayfairDisplay-Regular');
+}
+

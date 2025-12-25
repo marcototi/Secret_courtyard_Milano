@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>Cosa Fare a Milano | Attrazioni, Ristoranti, Locali | Secret Courtyard Milano</title>
+    <meta name="description" content="Cosa visitare a Milano: Duomo a 12 min, Navigli a 14 min, Colonne San Lorenzo a 5 min. Ristoranti tipici, locali, musei e shopping nel centro storico.">
+
+    <!-- Keywords -->
+    <meta name="keywords" content="cosa fare Milano, attrazioni Milano, Duomo Milano, Navigli Milano, Colonne San Lorenzo, ristoranti Milano, locali Milano, musei Milano, shopping Milano, nightlife Milano, turismo Milano">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://secretcourtyardmilano.com/pages/scopri-milano.html">
+
+    <!-- Open Graph Meta Tags (ottimizzati) -->
+    <meta property="og:title" content="Cosa Fare a Milano | Attrazioni e Esperienze dal Tuo Appartamento">
+    <meta property="og:description" content="Scopri Milano: Duomo a 12 min, Navigli a 14 min, musei, ristoranti tipici e locali nel centro storico. Guida completa per il tuo soggiorno.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://secretcourtyardmilano.com/pages/scopri-milano.html">
+    <meta property="og:image" content="https://secretcourtyardmilano.com/assets/images/Scopri Milano/duomo_milano_pisa.webp">
+    <meta property="og:image:secure_url" content="https://secretcourtyardmilano.com/assets/images/Scopri Milano/duomo_milano_pisa.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Duomo di Milano - Attrazione principale a 12 minuti da Secret Courtyard Milano">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:site_name" content="Secret Courtyard Milano">
+    <meta property="og:locale" content="it_IT">
+
+    <!-- Twitter Card Meta Tags (ottimizzati) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cosa Fare a Milano | Attrazioni e Esperienze dal Tuo Appartamento">
+    <meta name="twitter:description" content="Scopri Milano: Duomo a 12 min, Navigli a 14 min, musei, ristoranti tipici e locali nel centro storico. Guida completa per il tuo soggiorno.">
+    <meta name="twitter:image" content="https://secretcourtyardmilano.com/assets/images/Scopri Milano/duomo_milano_pisa.webp">
+    <meta name="twitter:image:alt" content="Duomo di Milano - Attrazione turistica principale di Milano">
+
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" aria-label="Navigazione principale">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><a href="../index.html" style="color: inherit; text-decoration: none;" aria-label="Secret Courtyard Milano - Torna alla home">Secret Courtyard Milano</a></h1>
+                </div>
+
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button class="hamburger" aria-label="Menu di navigazione" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="../index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="la-casa.html" role="menuitem">La Casa</a></li>
+                    <li role="none"><a href="mobilita.html" role="menuitem">Mobilità</a></li>
+                    <li role="none"><a href="scopri-milano.html" class="current-page" role="menuitem" aria-current="page">Scopri Milano</a></li>
+                    <li role="none"><a href="la-ristrutturazione.html" role="menuitem">La Ristrutturazione</a></li>
+                    <li role="none"><a href="../index.html#booking" role="menuitem">Prenota</a></li>
+                    <li role="none"><a href="../index.html#contact" role="menuitem">Contatti</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(rgba(44, 85, 48, 0.3), rgba(44, 85, 48, 0.3)), url('../assets/images/Scopri Milano/duomo_milano_pisa.webp') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1 class="hero-title">Scopri Milano</h1>
+            <p class="hero-subtitle">Qui troverai un consiglio per ogni tua esigenza</p>
+            <p class="hero-address">Via Lanzone 5, 20123 Milano</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="page-main">
+        <div class="container">
+            <!-- Principali Attrazioni Section -->
+            <section id="attrazioni" class="mobility-section">
+                <h2 class="section-title">🚶‍♂️ Principali Attrazioni Raggiungibili a Piedi</h2>
+                <div class="attractions-grid">
+                    <div class="attraction-item">
+                        <h4>Colonne di San Lorenzo</h4>
+                        <p>Antico complesso romano con atmosfera unica (5 min)</p>
+                    </div>
+                    <div class="attraction-item">
+                        <h4>Basilica di Sant'Ambrogio</h4>
+                        <p>Uno dei monumenti più importanti di Milano (6 min)</p>
+                    </div>
+                    <div class="attraction-item">
+                        <h4>Piazza Affari</h4>
+                        <p>Cuore finanziario della città (9 min)</p>
+                    </div>
+                    <div class="attraction-item">
+                        <h4>Duomo di Milano</h4>
+                        <p>Il simbolo di Milano (12 min)</p>
+                    </div>
+                    <div class="attraction-item centered-attraction">
+                        <h4>Navigli</h4>
+                        <p>Zona della movida milanese (14 min)</p>
+                    </div>
+                    <div class="attraction-item centered-attraction">
+                        <h4>Santa Maria delle Grazie (Ultima Cena)</h4>
+                        <p>Patrimonio UNESCO con il capolavoro di Leonardo (15 min)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ristoranti Section -->
+            <section id="ristoranti" class="mobility-section">
+                <h2 class="section-title">👨‍🍳 Ristoranti</h2>
+
+                <!-- Pizza Section -->
+                <div class="subsection">
+                    <h3>🍕 Pizza</h3>
+                    <div class="restaurant-grid">
+                        <div class="restaurant-item">
+                            <h4><a href="https://share.google/4On8jOxxFLY9ijHoO" target="_blank">Pizzeria Positano</a> <span class="price-indicator">€</span></h4>
+                            <p>Via San Vito, 5</p>
+                            <p>Pizza napoletana autentica</p>
+                        </div>
+                        <div class="restaurant-item">
+                            <h4><a href="https://share.google/zwpxRfcvNwXlIQmDA" target="_blank">Pizzeria del Ticinese</a> <span class="price-indicator">€€</span></h4>
+                            <p>Corso di Porta Ticinese, 65</p>
+                            <p>La classica pizza bassa romana</p>
+                        </div>
+                        <div class="restaurant-item">
+                            <h4><a href="https://share.google/gXdoAwaDelQvncK8M" target="_blank">Confine - Pizza e Cantina</a> <span class="price-indicator">€€€</span></h4>
+                            <p>Piazza Cardinal Massaia</p>
+                            <p>Pizza gourmet con selezione di vini</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pasta Section -->
+                <div class="subsection">
+                    <h3>🍝 Pasta</h3>
+                    <div class="restaurant-grid">
+                        <div class="restaurant-item">
+                            <h4><a href="https://share.google/8YVfpCeX0alY2GxMl" target="_blank">Pastificio Barosi Milano</a> <span class="price-indicator">€</span></h4>
+                            <p>Corso Genova, 26</p>
+                            <p>Pasta fresca tradizionale</p>
+                        </div>
+                        <div class="restaurant-item">
+                            <h4><a href="https://share.google/Mf1ZszltKyzRA2Ub7" target="_blank">Miscusi - Colonne</a> <span class="price-indicator">€€</span></h4>
+                            <p>Via Urbano III, 3</p>
+                            <p>Pasta contemporanea e creativa</p>
+                        </div>
+                        <div class="restaurant-item">
+                            <h4><a href="https://share.google/TZJcF2yYlmueeRdJ0" target="_blank">Felice a Testaccio Milano</a> <span class="price-indicator">€€€</span></h4>
+                            <p>Via del Torchio, 4</p>
+                            <p>Cucina romana tradizionale di alta gamma</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milanese Section -->
+                <div class="subsection">
+                    <h3>🍽️ Milanese</h3>
+                    <div class="restaurant-grid">
+                        <div class="restaurant-item">
+                            <h4><a href="https://share.google/1uaiaJzkJ5J7kkcSh" target="_blank">Osteria milanese OSS BUS</a> <span class="price-indicator">€</span></h4>
+                            <p>Via Magolfa, 1</p>
+                            <p>Osteria tipica milanese</p>
+                        </div>
+                        <div class="restaurant-item">
+                            <h4><a href="https://share.google/nPgkW29bN6uKZWRnj" target="_blank">Burla Giò</a> <span class="price-indicator">€€</span></h4>
+                            <p>Via S. Giovanni sul Muro, 21</p>
+                            <p>Ristorante milanese contemporaneo</p>
+                        </div>
+                        <div class="restaurant-item">
+                            <h4><a href="https://share.google/YFEUhBP1ErT1S9Lb4" target="_blank">Osteria del Balabiott</a> <span class="price-indicator">€€€</span></h4>
+                            <p>Piazza Vesuvio, 13</p>
+                            <p>Cucina milanese tradizionale</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bar Section -->
+            <section id="bar" class="mobility-section">
+                <h2 class="section-title">☕ Bar</h2>
+
+                <!-- Colazione Section -->
+                <div class="subsection">
+                    <h3>🥐 Colazione</h3>
+                    <div class="bar-grid">
+                        <div class="bar-item">
+                            <h4><a href="https://share.google/icgZOnrpbd2FE27Ag" target="_blank">Sottotorchio</a> <span class="price-indicator">€</span></h4>
+                            <p>Via Lanzone, 10</p>
+                            <p>Bar tradizionale milanese</p>
+                        </div>
+                        <div class="bar-item">
+                            <h4><a href="https://share.google/GaiuDbgcHPI2x6HCU" target="_blank">Panarello</a> <span class="price-indicator">€€</span></h4>
+                            <p>Corso di Porta Ticinese, 45</p>
+                            <p>Bar contemporaneo di qualità</p>
+                        </div>
+                        <div class="bar-item">
+                            <h4><a href="https://share.google/5Umy39K6Lqi2BaEim" target="_blank">Pasticceria Marchesi</a> <span class="price-indicator">€€€</span></h4>
+                            <p>Via Santa Maria alla Porta, 11/a</p>
+                            <p>Pasticceria storica milanese</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cocktail Bar Section -->
+                <div class="subsection">
+                    <h3>🍸 Cocktail Bar</h3>
+                    <div class="bar-grid">
+                        <div class="bar-item">
+                            <h4><a href="https://share.google/JeOwHzvKPx3jRm7nP" target="_blank">MOM</a> <span class="price-indicator">€</span></h4>
+                            <p>Via Montenero, 51</p>
+                            <p>Cocktail bar contemporaneo</p>
+                        </div>
+                        <div class="bar-item">
+                            <h4><a href="https://share.google/G1l36B5iaEZUznjcx" target="_blank">Iter</a> <span class="price-indicator">€€</span></h4>
+                            <p>Via Fusetti, 1</p>
+                            <p>Cocktail bar innovativo</p>
+                        </div>
+                        <div class="bar-item">
+                            <h4><a href="https://share.google/J39geO9FSRo1QDkQ4" target="_blank">Banco</a> <span class="price-indicator">€€</span></h4>
+                            <p>Alzaia Naviglio Grande, 46</p>
+                            <p>Cocktail creativi e atmosfera</p>
+                        </div>
+                        <div class="bar-item">
+                            <h4><a href="https://share.google/yr5lPX10zpLyrg7KY" target="_blank">SunEleven Rooftop Bar</a> <span class="price-indicator">€€</span></h4>
+                            <p>Piazza Cesare Beccaria (accesso da iH Hotel)</p>
+                            <p>Rooftop bar con vista panoramica</p>
+                        </div>
+                        <div class="bar-item">
+                            <h4><a href="https://share.google/3Wry1PQd8rNXwMqW2" target="_blank">Radio Bar Rooftop</a> <span class="price-indicator">€€€</span></h4>
+                            <p>Via Marco Polo, 18</p>
+                            <p>Rooftop bar con vista panoramica</p>
+                        </div>
+                        <div class="bar-item">
+                            <h4><a href="https://share.google/QafWzwjdmE6rjlCDe" target="_blank">Nottingham Forest</a> <span class="price-indicator">€€€</span></h4>
+                            <p>Viale Piave, 1</p>
+                            <p>Tra i migliori cocktail bar al mondo</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tour di Milano Section -->
+            <section id="itinerari" class="mobility-section">
+                <h2 class="section-title">🗓️ Tour di Milano</h2>
+                <div class="container">
+                    <div class="tour-grid">
+                        <!-- Tour 1 Giorno -->
+                        <div class="tour-box" onclick="toggleTour('tour-1-giorno')">
+                            <div class="tour-header">
+                                <h3>🚶‍♂️ Tour di 1 Giorno</h3>
+                                <span class="tour-arrow">▼</span>
+                            </div>
+                            <div class="tour-content" id="tour-1-giorno">
+                                <div class="tour-day">
+                                    <h4 class="tour-day-title">Giorno 1 – Milano Essenziale</h4>
+
+                                    <div class="tour-section">
+                                        <h4>🏛️ Luoghi da visitare</h4>
+                                        <ul>
+                                            <li>Darsena</li>
+                                            <li>Navigli</li>
+                                            <li>Duomo di Milano</li>
+                                            <li>Galleria Vittorio Emanuele II</li>
+                                            <li>Teatro alla Scala</li>
+                                            <li>Quartiere Brera</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🚶‍♂️ Come arrivare</h4>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚶‍♂️</span>
+                                            <span>15 min a piedi fino a Navigli</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚋</span>
+                                            <span>Tram 2/14 per Duomo</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚶‍♂️</span>
+                                            <span>10 min a piedi da Duomo a Brera</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🍝 Dove mangiare (pranzo)</h4>
+                                        <ul>
+                                            <li><strong>Navigli</strong> - ristoranti tipici lungo i canali</li>
+                                            <li><strong>Luini</strong> - panzerotti tradizionali</li>
+                                            <li><strong>Risoelatte</strong> - trattoria rétro</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-highlight">
+                                        <p><strong>💡 Suggerimento:</strong> Inizia la giornata con una passeggiata sui Navigli, poi dirigiti verso il Duomo. Chiudi con un aperitivo in Brera per un'esperienza completa di Milano.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tour 2 Giorni -->
+                        <div class="tour-box" onclick="toggleTour('tour-2-giorni')">
+                            <div class="tour-header">
+                                <h3>🏛️ Tour di 2 Giorni</h3>
+                                <span class="tour-arrow">▼</span>
+                            </div>
+                            <div class="tour-content" id="tour-2-giorni">
+                                <div class="tour-day">
+                                    <h4 class="tour-day-title">Giorno 1 – Centro Storico e Brera</h4>
+
+                                    <div class="tour-section">
+                                        <h4>🏛️ Luoghi da visitare</h4>
+                                        <ul>
+                                            <li>Duomo di Milano</li>
+                                            <li>Terrazze del Duomo</li>
+                                            <li>Galleria Vittorio Emanuele II</li>
+                                            <li>Teatro alla Scala</li>
+                                            <li>Quartiere Brera</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🚶‍♂️ Come arrivare</h4>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚶‍♂️</span>
+                                            <span>15 min a piedi</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚋</span>
+                                            <span>Tram 2/14 (fermata Duomo)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🍝 Dove mangiare (pranzo)</h4>
+                                        <ul>
+                                            <li><strong>Luini</strong> - panzerotti tradizionali</li>
+                                            <li><strong>Risoelatte</strong> - trattoria rétro</li>
+                                            <li><strong>Terrazza Arengario</strong> - vista Duomo</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-highlight">
+                                        <p><strong>💡 Suggerimento:</strong> Inizia la visita dal cuore di Milano. Dalla Galleria, raggiungi facilmente Brera per una cena tipica e una passeggiata serale.</p>
+                                    </div>
+                                </div>
+
+                                <div class="tour-day">
+                                    <h4 class="tour-day-title">Giorno 2 – Cenacolo e Castello Sforzesco</h4>
+
+                                    <div class="tour-section">
+                                        <h4>🎨 Luoghi da visitare</h4>
+                                        <ul>
+                                            <li>Santa Maria delle Grazie</li>
+                                            <li>Cenacolo Vinciano</li>
+                                            <li>Castello Sforzesco</li>
+                                            <li>Parco Sempione</li>
+                                            <li>Arco della Pace</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🚇 Come arrivare</h4>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚶‍♂️</span>
+                                            <span>15 min a piedi</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚇</span>
+                                            <span>Metro M1/M2 fino a Cadorna</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🍝 Dove mangiare (pranzo)</h4>
+                                        <ul>
+                                            <li><strong>Trattoria Il Cestino</strong></li>
+                                            <li><strong>La Tartina</strong></li>
+                                            <li><strong>Pandenus Mercato</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-highlight">
+                                        <p><strong>⚠️ Importante:</strong> Prenota il Cenacolo con largo anticipo. Dopo la visita, attraversa Parco Sempione per una pausa rilassante.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tour 3 Giorni -->
+                        <div class="tour-box" onclick="toggleTour('tour-3-giorni')">
+                            <div class="tour-header">
+                                <h3>🎨 Tour di 3 Giorni</h3>
+                                <span class="tour-arrow">▼</span>
+                            </div>
+                            <div class="tour-content" id="tour-3-giorni">
+                                <div class="tour-day">
+                                    <h4 class="tour-day-title">Giorno 1 – Centro Storico e Brera</h4>
+
+                                    <div class="tour-section">
+                                        <h4>🏛️ Luoghi da visitare</h4>
+                                        <ul>
+                                            <li>Duomo di Milano</li>
+                                            <li>Galleria Vittorio Emanuele II</li>
+                                            <li>Teatro alla Scala</li>
+                                            <li>Quartiere Brera</li>
+                                            <li>Castello Sforzesco</li>
+                                            <li>Parco Sempione</li>
+                                            <li>Navigli</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🚇 Come arrivare</h4>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚶‍♂️</span>
+                                            <span>10 min a piedi fino a Cadorna</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚇</span>
+                                            <span>Metro M1 rossa fino a Duomo</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🍝 Dove mangiare (pranzo)</h4>
+                                        <ul>
+                                            <li><strong>Osteria di Brera</strong></li>
+                                            <li><strong>La Taverna del Borgo Antico</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-highlight">
+                                        <p><strong>💡 Suggerimento:</strong> Salita sulle Terrazze del Duomo consigliata al mattino. Aperitivo e cena sui Navigli per chiudere la giornata.</p>
+                                    </div>
+                                </div>
+
+                                <div class="tour-day">
+                                    <h4 class="tour-day-title">Giorno 2 – Cenacolo e Porta Nuova</h4>
+
+                                    <div class="tour-section">
+                                        <h4>🎨 Luoghi da visitare</h4>
+                                        <ul>
+                                            <li>Cenacolo Vinciano</li>
+                                            <li>Santa Maria delle Grazie</li>
+                                            <li>Porta Nuova</li>
+                                            <li>Bosco Verticale</li>
+                                            <li>Corso Como</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🚇 Come arrivare</h4>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚶‍♂️</span>
+                                            <span>7 min a piedi da Via Lanzone</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚇</span>
+                                            <span>Metro M2 da Cadorna a Garibaldi</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🍝 Dove mangiare (pranzo)</h4>
+                                        <ul>
+                                            <li><strong>Eataly Smeraldo</strong></li>
+                                            <li><strong>California Bakery</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-highlight">
+                                        <p><strong>⚠️ Importante:</strong> Prenota con largo anticipo la visita al Cenacolo. Ottimo tramonto nella zona Gae Aulenti.</p>
+                                    </div>
+                                </div>
+
+                                <div class="tour-day">
+                                    <h4 class="tour-day-title">Giorno 3 – Navigli e Fondazione Prada</h4>
+
+                                    <div class="tour-section">
+                                        <h4>🚣‍♂️ Luoghi da visitare</h4>
+                                        <ul>
+                                            <li>Darsena</li>
+                                            <li>Navigli</li>
+                                            <li>Porta Genova</li>
+                                            <li>Fondazione Prada</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🚋 Come arrivare</h4>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚋</span>
+                                            <span>Tram 2 fino a Porta Genova</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚋</span>
+                                            <span>Tram 24 o taxi per Prada</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🍝 Dove mangiare (pranzo)</h4>
+                                        <ul>
+                                            <li><strong>Trattoria Madonnina</strong></li>
+                                            <li><strong>Pizzium (Via Vigevano)</strong></li>
+                                            <li><strong>Osteria Conchetta</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-highlight">
+                                        <p><strong>💡 Suggerimento:</strong> Navigli è perfetta per scoprire la Milano più autentica. Aperitivo al tramonto lungo i canali.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tour 4 Giorni -->
+                        <div class="tour-box" onclick="toggleTour('tour-4-giorni')">
+                            <div class="tour-header">
+                                <h3>🏰 Tour di 4 Giorni</h3>
+                                <span class="tour-arrow">▼</span>
+                            </div>
+                            <div class="tour-content" id="tour-4-giorni">
+                                <div class="tour-day">
+                                    <h4 class="tour-day-title">Giorno 1 – Centro Storico e Brera</h4>
+
+                                    <div class="tour-section">
+                                        <h4>🏛️ Luoghi da visitare</h4>
+                                        <ul>
+                                            <li>Duomo di Milano</li>
+                                            <li>Galleria Vittorio Emanuele II</li>
+                                            <li>Teatro alla Scala</li>
+                                            <li>Quartiere Brera</li>
+                                            <li>Castello Sforzesco</li>
+                                            <li>Parco Sempione</li>
+                                            <li>Navigli</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🚇 Come arrivare</h4>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚶‍♂️</span>
+                                            <span>10 min a piedi fino a Cadorna</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚇</span>
+                                            <span>Metro M1 rossa fino a Duomo</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🍝 Dove mangiare (pranzo)</h4>
+                                        <ul>
+                                            <li><strong>Ristorante Rigolo (Brera)</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-highlight">
+                                        <p><strong>💡 Suggerimento:</strong> Prenota in anticipo il biglietto per la terrazza del Duomo.</p>
+                                    </div>
+                                </div>
+
+                                <div class="tour-day">
+                                    <h4 class="tour-day-title">Giorno 2 – Cenacolo e Porta Nuova</h4>
+
+                                    <div class="tour-section">
+                                        <h4>🎨 Luoghi da visitare</h4>
+                                        <ul>
+                                            <li>Cenacolo Vinciano</li>
+                                            <li>Santa Maria delle Grazie</li>
+                                            <li>Porta Nuova</li>
+                                            <li>Bosco Verticale</li>
+                                            <li>Corso Como</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🚇 Come arrivare</h4>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚶‍♂️</span>
+                                            <span>7 min a piedi da Via Lanzone</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚇</span>
+                                            <span>Metro M2 da Cadorna a Garibaldi</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🍝 Dove mangiare (pranzo)</h4>
+                                        <ul>
+                                            <li><strong>Eataly Smeraldo</strong></li>
+                                            <li><strong>California Bakery</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-highlight">
+                                        <p><strong>⚠️ Importante:</strong> Prenota con largo anticipo la visita al Cenacolo. Ottimo tramonto nella zona Gae Aulenti.</p>
+                                    </div>
+                                </div>
+
+                                <div class="tour-day">
+                                    <h4 class="tour-day-title">Giorno 3 – Navigli e Fondazione Prada</h4>
+
+                                    <div class="tour-section">
+                                        <h4>🚣‍♂️ Luoghi da visitare</h4>
+                                        <ul>
+                                            <li>Darsena</li>
+                                            <li>Navigli</li>
+                                            <li>Porta Genova</li>
+                                            <li>Fondazione Prada</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🚋 Come arrivare</h4>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚋</span>
+                                            <span>Tram 2 fino a Porta Genova</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚋</span>
+                                            <span>Tram 24 o taxi per Prada</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🍝 Dove mangiare (pranzo)</h4>
+                                        <ul>
+                                            <li><strong>Trattoria Madonnina</strong></li>
+                                            <li><strong>Pizzium (Via Vigevano)</strong></li>
+                                            <li><strong>Osteria Conchetta</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-highlight">
+                                        <p><strong>💡 Suggerimento:</strong> Navigli è perfetta per scoprire la Milano più autentica. Aperitivo al tramonto lungo i canali.</p>
+                                    </div>
+                                </div>
+
+                                <div class="tour-day">
+                                    <h4 class="tour-day-title">Giorno 4 – Musei extra oppure CityLife</h4>
+
+                                    <div class="tour-section">
+                                        <h4>🏛️ Opzione A - Musei</h4>
+                                        <ul>
+                                            <li>Museo Scienza e Tecnologia</li>
+                                            <li>Pinacoteca Ambrosiana</li>
+                                            <li>Museo del Novecento</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🏙️ Opzione B - CityLife</h4>
+                                        <ul>
+                                            <li>Parco CityLife</li>
+                                            <li>Torri Hadid–Isozaki–Libeskind</li>
+                                            <li>CityLife Shopping District</li>
+                                            <li>Casa Milan</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🚇 Come arrivare</h4>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚇</span>
+                                            <span>Metro Sant'Ambrogio / Duomo (A)</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚇</span>
+                                            <span>Metro M1 fino a Tre Torri (B)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🍝 Dove mangiare (pranzo)</h4>
+                                        <ul>
+                                            <li><strong>That's Vapore</strong></li>
+                                            <li><strong>Bomaki CityLife</strong></li>
+                                            <li><strong>Panino Giusto CityLife</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-highlight">
+                                        <p><strong>💡 Suggerimento:</strong> CityLife è l'anima contemporanea della città: architettura iconica, verde e relax. Ottima chiusura del viaggio.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tour 5 Giorni -->
+                        <div class="tour-box" onclick="toggleTour('tour-5-giorni')">
+                            <div class="tour-header">
+                                <h3>🌟 Tour di 5 Giorni</h3>
+                                <span class="tour-arrow">▼</span>
+                            </div>
+                            <div class="tour-content" id="tour-5-giorni">
+                                <div class="tour-day">
+                                    <h4 class="tour-day-title">Giorno 1 – Centro Storico e Brera</h4>
+
+                                    <div class="tour-section">
+                                        <h4>🏛️ Luoghi da visitare</h4>
+                                        <ul>
+                                            <li>Duomo di Milano</li>
+                                            <li>Galleria Vittorio Emanuele II</li>
+                                            <li>Teatro alla Scala</li>
+                                            <li>Quartiere Brera</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🚶‍♂️ Come arrivare</h4>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚶‍♂️</span>
+                                            <span>15 min a piedi</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚋</span>
+                                            <span>Tram 2/14 (fermata Duomo)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🍝 Dove mangiare (pranzo)</h4>
+                                        <ul>
+                                            <li><strong>Luini</strong> - panzerotti tradizionali</li>
+                                            <li><strong>Risoelatte</strong> - trattoria rétro</li>
+                                            <li><strong>Terrazza Arengario</strong> - vista Duomo</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-highlight">
+                                        <p><strong>💡 Suggerimento:</strong> Giornata introduttiva perfetta per ambientarsi. Aperitivo e cena in Brera.</p>
+                                    </div>
+                                </div>
+
+                                <div class="tour-day">
+                                    <h4 class="tour-day-title">Giorno 2 – Cenacolo, Castello e Parco Sempione</h4>
+
+                                    <div class="tour-section">
+                                        <h4>🎨 Luoghi da visitare</h4>
+                                        <ul>
+                                            <li>Santa Maria delle Grazie</li>
+                                            <li>Cenacolo Vinciano</li>
+                                            <li>Castello Sforzesco</li>
+                                            <li>Parco Sempione</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🚇 Come arrivare</h4>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚇</span>
+                                            <span>Metro M1/M2 → Cadorna</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚶‍♂️</span>
+                                            <span>poi a piedi (10 min)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🍝 Dove mangiare (pranzo)</h4>
+                                        <ul>
+                                            <li><strong>Il Cestino</strong></li>
+                                            <li><strong>La Tartina</strong></li>
+                                            <li><strong>Pandenus</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-highlight">
+                                        <p><strong>💡 Suggerimento:</strong> Dopo la visita al Cenacolo, passeggiata nel parco e aperitivo serale all'Arco della Pace.</p>
+                                    </div>
+                                </div>
+
+                                <div class="tour-day">
+                                    <h4 class="tour-day-title">Giorno 3 – Brera, Quadrilatero e Porta Nuova</h4>
+
+                                    <div class="tour-section">
+                                        <h4>🖼️ Luoghi da visitare</h4>
+                                        <ul>
+                                            <li>Pinacoteca di Brera</li>
+                                            <li>Via Montenapoleone</li>
+                                            <li>Via della Spiga</li>
+                                            <li>Corso Como</li>
+                                            <li>Bosco Verticale</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🚇 Come arrivare</h4>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚶‍♂️</span>
+                                            <span>A piedi per Brera</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚇</span>
+                                            <span>Metro M3 / tram per Repubblica o Garibaldi</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🍝 Dove mangiare (pranzo)</h4>
+                                        <ul>
+                                            <li><strong>Caffè Napoli</strong></li>
+                                            <li><strong>Eataly Smeraldo</strong></li>
+                                            <li><strong>Corso Como 10 Café</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-highlight">
+                                        <p><strong>💡 Suggerimento:</strong> Giornata tra arte e design. Perfetta per foto e shopping.</p>
+                                    </div>
+                                </div>
+
+                                <div class="tour-day">
+                                    <h4 class="tour-day-title">Giorno 4 – CityLife / Tre Torri + Casa Milan</h4>
+
+                                    <div class="tour-section">
+                                        <h4>🏙️ Luoghi da visitare</h4>
+                                        <ul>
+                                            <li>Parco CityLife</li>
+                                            <li>Torri Hadid–Isozaki–Libeskind</li>
+                                            <li>CityLife Shopping District</li>
+                                            <li>Casa Milan</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🚇 Come arrivare</h4>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚇</span>
+                                            <span>Metro M1 → Tre Torri (15 min)</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚶‍♂️</span>
+                                            <span>a piedi fino a Casa Milan (10 min)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🍝 Dove mangiare (pranzo)</h4>
+                                        <ul>
+                                            <li><strong>That's Vapore</strong></li>
+                                            <li><strong>Bomaki CityLife</strong></li>
+                                            <li><strong>Panino Giusto</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-highlight">
+                                        <p><strong>💡 Suggerimento:</strong> CityLife unisce architettura, verde e relax. Ottima area per shopping e foto panoramiche.</p>
+                                    </div>
+                                </div>
+
+                                <div class="tour-day">
+                                    <h4 class="tour-day-title">Giorno 5 – Navigli, Fondazione Prada e relax finale</h4>
+
+                                    <div class="tour-section">
+                                        <h4>🚣‍♂️ Luoghi da visitare</h4>
+                                        <ul>
+                                            <li>Darsena</li>
+                                            <li>Navigli</li>
+                                            <li>Corso Ticinese</li>
+                                            <li>Fondazione Prada</li>
+                                            <li>Museo del Novecento (facoltativo)</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🚋 Come arrivare</h4>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚋</span>
+                                            <span>Tram 2 → Porta Genova</span>
+                                        </div>
+                                        <div class="tour-transport">
+                                            <span class="tour-transport-icon">🚋</span>
+                                            <span>Tram 24 o taxi per Prada</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-section">
+                                        <h4>🍝 Dove mangiare (pranzo)</h4>
+                                        <ul>
+                                            <li><strong>Madonnina</strong></li>
+                                            <li><strong>Osteria Conchetta</strong></li>
+                                            <li><strong>Pizzium</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tour-highlight">
+                                        <p><strong>💡 Suggerimento:</strong> Ultimo giorno all'insegna della Milano più autentica. Perfetta conclusione con aperitivo al tramonto.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gite giornaliere fuori città Section -->
+            <section id="gite" class="mobility-section">
+                <h2 class="section-title">🚗 Gite giornaliere fuori città</h2>
+                <div class="container">
+                    <div class="tour-grid">
+                        <!-- Lago di Como -->
+                        <div class="tour-box" onclick="toggleTour('gita-como')">
+                            <div class="tour-header">
+                                <h3>🏞️ Lago di Como</h3>
+                                <span class="tour-arrow">▼</span>
+                            </div>
+                            <div class="tour-content" id="gita-como">
+                                <div class="tour-section">
+                                    <h4>🚗 In Auto</h4>
+                                    <ul>
+                                        <li><strong>Tempo:</strong> 1 ora</li>
+                                        <li><strong>Percorso:</strong> Autostrada A8/A9 direzione Como</li>
+                                        <li><strong>Parcheggio:</strong> Parcheggi a pagamento in centro città</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-section">
+                                    <h4>🚆 Con Mezzi Pubblici</h4>
+                                    <ul>
+                                        <li><strong>Treno:</strong> Regionale da Milano Cadorna a Como S. Giovanni (40 min)</li>
+                                        <li><strong>Autobus:</strong> Linee locali per i paesi del lago</li>
+                                        <li><strong>Battello:</strong> Navigazione sul lago da Como</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-section">
+                                    <h4>🏛️ Cosa Vedere</h4>
+                                    <ul>
+                                        <li>Duomo di Como</li>
+                                        <li>Villa Olmo</li>
+                                        <li>Passeggiata lungo il lago</li>
+                                        <li>Funicolare per Brunate</li>
+                                        <li>Bellagio e Varenna (in battello)</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-highlight">
+                                    <p><strong>💡 Suggerimento:</strong> Prendi il battello per Bellagio per ammirare le ville storiche e i panorami più belli del lago.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bergamo Alta -->
+                        <div class="tour-box" onclick="toggleTour('gita-bergamo')">
+                            <div class="tour-header">
+                                <h3>🏰 Bergamo Alta</h3>
+                                <span class="tour-arrow">▼</span>
+                            </div>
+                            <div class="tour-content" id="gita-bergamo">
+                                <div class="tour-section">
+                                    <h4>🚗 In Auto</h4>
+                                    <ul>
+                                        <li><strong>Tempo:</strong> 50 minuti</li>
+                                        <li><strong>Percorso:</strong> Autostrada A4 direzione Venezia</li>
+                                        <li><strong>Parcheggio:</strong> Parcheggi a pagamento alla base della funicolare</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-section">
+                                    <h4>🚆 Con Mezzi Pubblici</h4>
+                                    <ul>
+                                        <li><strong>Treno:</strong> Regionale da Milano Cadorna a Bergamo (50 min)</li>
+                                        <li><strong>Funicolare:</strong> Da Bergamo Bassa a Bergamo Alta (5 min)</li>
+                                        <li><strong>Autobus:</strong> Linea 1 dalla stazione alla funicolare</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-section">
+                                    <h4>🏛️ Cosa Vedere</h4>
+                                    <ul>
+                                        <li>Piazza Vecchia</li>
+                                        <li>Basilica di Santa Maria Maggiore</li>
+                                        <li>Rocca di Bergamo</li>
+                                        <li>Mura Venete</li>
+                                        <li>Via Gombito e botteghe storiche</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-highlight">
+                                    <p><strong>💡 Suggerimento:</strong> Salta la coda prendendo la funicolare dal centro città. Prova i polentini bergamaschi in una delle trattorie storiche.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Franciacorta -->
+                        <div class="tour-box" onclick="toggleTour('gita-franciacorta')">
+                            <div class="tour-header">
+                                <h3>🍷 Franciacorta</h3>
+                                <span class="tour-arrow">▼</span>
+                            </div>
+                            <div class="tour-content" id="gita-franciacorta">
+                                <div class="tour-section">
+                                    <h4>🚗 In Auto</h4>
+                                    <ul>
+                                        <li><strong>Tempo:</strong> 1 ora e 15 min</li>
+                                        <li><strong>Percorso:</strong> Autostrada A4 direzione Brescia</li>
+                                        <li><strong>Parcheggio:</strong> Ampia disponibilità presso le cantine</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-section">
+                                    <h4>🏛️ Cosa Vedere</h4>
+                                    <ul>
+                                        <li>Cantine di Franciacorta (prenotazione obbligatoria)</li>
+                                        <li>Borgo di Erbusco</li>
+                                        <li>Lago d'Iseo</li>
+                                        <li>Monte Isola</li>
+                                        <li>Abbazia di Rodengo</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-section">
+                                    <h4>🍷 Degustazioni</h4>
+                                    <ul>
+                                        <li><strong>Ca' del Bosco</strong> - cantina iconica</li>
+                                        <li><strong>Bellavista</strong> - vini di alta gamma</li>
+                                        <li><strong>Berlucchi</strong> - cantina storica</li>
+                                        <li><strong>Ricci Curbastro</strong> - produzione biologica</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-highlight">
+                                    <p><strong>⚠️ Importante:</strong> Prenota le degustazioni con almeno una settimana di anticipo.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Parco di Monza e Villa Reale -->
+                        <div class="tour-box" onclick="toggleTour('gita-monza')">
+                            <div class="tour-header">
+                                <h3>🌳 Parco di Monza e Villa Reale</h3>
+                                <span class="tour-arrow">▼</span>
+                            </div>
+                            <div class="tour-content" id="gita-monza">
+                                <div class="tour-section">
+                                    <h4>🚗 In Auto</h4>
+                                    <ul>
+                                        <li><strong>Tempo:</strong> 25 minuti</li>
+                                        <li><strong>Percorso:</strong> Tangenziale Est direzione Monza</li>
+                                        <li><strong>Parcheggio:</strong> Ampio parcheggio gratuito all'ingresso del parco</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-section">
+                                    <h4>🚆 Con Mezzi Pubblici</h4>
+                                    <ul>
+                                        <li><strong>Treno:</strong> Regionale da Milano Cadorna a Monza (15 min)</li>
+                                        <li><strong>Autobus:</strong> Linea Z221 dalla stazione al parco (10 min)</li>
+                                        <li><strong>A piedi:</strong> 20 minuti dalla stazione al parco</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-section">
+                                    <h4>🏛️ Cosa Vedere</h4>
+                                    <ul>
+                                        <li>Villa Reale (visite guidate)</li>
+                                        <li>Giardini all'italiana</li>
+                                        <li>Autodromo Nazionale Monza</li>
+                                        <li>Ponte delle Catene</li>
+                                        <li>Mulini del Lambro</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-highlight">
+                                    <p><strong>💡 Suggerimento:</strong> Noleggia una bicicletta all'ingresso per esplorare tutto il parco (688 ettari).</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Abbazia Morimondo -->
+                        <div class="tour-box" onclick="toggleTour('gita-morimondo')">
+                            <div class="tour-header">
+                                <h3>⛪ Abbazia Morimondo</h3>
+                                <span class="tour-arrow">▼</span>
+                            </div>
+                            <div class="tour-content" id="gita-morimondo">
+                                <div class="tour-section">
+                                    <h4>🚗 In Auto</h4>
+                                    <ul>
+                                        <li><strong>Tempo:</strong> 40 minuti</li>
+                                        <li><strong>Percorso:</strong> Tangenziale Ovest direzione Vigevano</li>
+                                        <li><strong>Parcheggio:</strong> Ampio parcheggio gratuito</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-section">
+                                    <h4>🚲 In Bici</h4>
+                                    <ul>
+                                        <li><strong>Tempo:</strong> 1 ora e 30 min (pista ciclabile)</li>
+                                        <li><strong>Percorso:</strong> Naviglio Pavese fino a Morimondo</li>
+                                        <li><strong>Distanza:</strong> 25 km da Milano</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-section">
+                                    <h4>🏛️ Cosa Vedere</h4>
+                                    <ul>
+                                        <li>Abbazia Cistercense (XII secolo)</li>
+                                        <li>Chiostro medievale</li>
+                                        <li>Museo dell'Abbazia</li>
+                                        <li>Borgo storico di Morimondo</li>
+                                        <li>Campagna circostante</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-section">
+                                    <h4>📅 Orari e Info</h4>
+                                    <ul>
+                                        <li><strong>Visite guidate:</strong> Sabato e Domenica</li>
+                                        <li><strong>Messa:</strong> Domenica ore 11:00</li>
+                                        <li><strong>Ingresso:</strong> Offerta libera</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tour-highlight">
+                                    <p><strong>💡 Suggerimento:</strong> Abbina la visita con un pranzo in una delle trattorie tipiche del borgo per un'esperienza completa.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- JavaScript per i Tour Box -->
+    <script src="../assets/js/components/tour-boxes.js" defer></script>
+
+    <!-- Gallery Icon -->
+    <div class="gallery-icon" id="gallery-icon">
+        <button class="gallery-button" aria-label="Apri galleria immagini">
+            <span class="gallery-icon-text">📷</span>
+        </button>
+    </div>
+
+    <!-- Gallery Lightbox -->
+    <div class="gallery-lightbox" id="gallery-lightbox">
+        <div class="gallery-lightbox-content">
+            <button class="gallery-lightbox-close" id="gallery-lightbox-close">&times;</button>
+            <button class="gallery-lightbox-nav gallery-lightbox-prev" id="gallery-lightbox-prev">❮</button>
+            <button class="gallery-lightbox-nav gallery-lightbox-next" id="gallery-lightbox-next">❯</button>
+            <img class="gallery-lightbox-image" id="gallery-lightbox-image" src="" alt="">
+            <div class="gallery-lightbox-counter" id="gallery-lightbox-counter"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Secret Courtyard Milano</h3>
+                    <p>Un'esperienza autentica nel cuore di Milano</p>
+                    <p>Via Lanzone 5, 20123 Milano</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Link Rapidi</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="la-casa.html">La Casa</a></li>
+                        <li><a href="mobilita.html">Mobilità</a></li>
+                        <li><a href="scopri-milano.html">Scopri Milano</a></li>
+                        <li><a href="../index.html#booking">Prenota</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contatti</h4>
+                    <ul>
+                        <li><a href="tel:+393664162554">+39 366 416 2554</a></li>
+                        <li><a href="mailto:marcototi98@gmail.com">marcototi98@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Secret Courtyard Milano. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+/*
+ * Secret Courtyard Milano - Hero
+ * Modulo CSS estratto da base.css
+ */
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff" fill-opacity="0.05" points="0,1000 1000,0 1000,1000"/></svg>');
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.hero-address {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: var(--text-dark);
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cta-button:hover {
+    background: #e6c34d;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.cta-button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    background: #e6c34d;
+}
+

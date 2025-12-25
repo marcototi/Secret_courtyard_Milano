@@ -1,0 +1,47 @@
+/*
+ * Secret Courtyard Milano - CSS Variables
+ * Design system e variabili globali
+ */
+
+:root {
+    /* Colori principali */
+    --primary-color: #2c5530;
+    --primary-light: #3a6b47; /* Darkened for better contrast */
+    --secondary-color: #b8941f; /* Darkened for better contrast */
+    --accent-color: #8b4513;
+
+    /* Colori testo */
+    --text-dark: #2d3748;
+    --text-light: #5a6c7d; /* Darkened for better contrast */
+
+    /* Colori background */
+    --background-light: #f8fafc;
+    --white: #ffffff;
+
+    /* Ombre */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    /* Spaziature */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    /* Border radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+
+    /* Transizioni */
+    --transition-fast: 150ms ease;
+    --transition-normal: 300ms ease;
+    --transition-slow: 500ms ease;
+
+    /* Breakpoints */
+    --breakpoint-mobile: 480px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+    --breakpoint-wide: 1200px;
+}

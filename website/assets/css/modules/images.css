@@ -1,0 +1,15 @@
+/*
+ * Secret Courtyard Milano - Images
+ * Modulo CSS estratto da base.css
+ */
+
+/* Room Images */
+.room-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    background-color: var(--white) !important; 

@@ -1,0 +1,85 @@
+/*
+ * Secret Courtyard Milano - CSS Reset
+ * Reset e impostazioni base per consistenza cross-browser
+ */
+
+/* Reset box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Impostazioni base per HTML e body */
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    overflow-x: hidden;
+}
+
+/* Reset liste */
+ul, ol {
+    list-style: none;
+}
+
+/* Reset link */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+/* Reset immagini */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Reset bottoni */
+button {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Reset input e textarea */
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+/* Focus styles per accessibilità */
+:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* Selezione testo */
+::selection {
+    background-color: var(--primary-color);
+    color: var(--white);
+}

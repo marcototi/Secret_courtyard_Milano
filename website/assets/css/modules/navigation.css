@@ -1,0 +1,38 @@
+/*
+ * Secret Courtyard Milano - Navigation
+ * Modulo CSS estratto da base.css
+ */
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1002;
+    position: relative;
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+

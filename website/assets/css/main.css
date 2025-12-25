@@ -1,0 +1,24 @@
+/*
+ * Secret Courtyard Milano - CSS Main File
+ * Importa tutti i moduli CSS
+ * Versione modulare per miglior performance e manutenibilità
+ */
+
+/* 1. Variabili e impostazioni base */
+@import url('modules/variables.css');
+@import url('modules/reset.css');
+@import url('modules/fonts.css');
+
+/* 2. Componenti di layout */
+@import url('modules/header.css');
+@import url('modules/hero.css');
+@import url('modules/sections.css');
+@import url('modules/footer.css');
+
+/* 3. Componenti specifici */
+@import url('modules/navigation.css');
+@import url('modules/images.css');
+@import url('modules/lightbox.css');
+
+/* 4. Utility e responsive */
+@import url('modules/responsive.css');

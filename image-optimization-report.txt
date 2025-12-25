@@ -1,0 +1,8 @@
+Report Ottimizzazione Immagini - 2025-12-25 23:00:08
+============================================================
+Immagini processate: 0
+Immagini fallite: 114
+Dimensione originale: 390.01 MB
+Dimensione ottimizzata: 0.00 MB
+Riduzione: 100.0%
+Spazio risparmiato: 390.01 MB

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>Appartamento Secret Courtyard Milano | La Casa | Soggiorno, Camera, Cucina, Bagno</title>
+    <meta name="description" content="Scopri l'appartamento di design Secret Courtyard Milano: 45 m², 2 locali, soggiorno con divano letto, camera matrimoniale, cucina attrezzata, bagno moderno. Check-in automatico 24/7.">
+
+    <!-- Keywords -->
+    <meta name="keywords" content="appartamento Milano, interno appartamento, soggiorno Milano, camera da letto Milano, cucina attrezzata, bagno design, divano letto, arredamento moderno, 45 metri quadri, 2 locali">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://secretcourtyardmilano.com/pages/la-casa.html">
+
+    <!-- Open Graph Meta Tags (ottimizzati) -->
+    <meta property="og:title" content="Appartamento Secret Courtyard Milano | La Casa | Foto e Descrizione">
+    <meta property="og:description" content="Visita l'appartamento di 45 m² nel centro di Milano: soggiorno, camera, cucina e bagno completamente attrezzati. Check-in automatico 24/7.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://secretcourtyardmilano.com/pages/la-casa.html">
+    <meta property="og:image" content="https://secretcourtyardmilano.com/assets/images/La casa/Hero.jpg">
+    <meta property="og:image:secure_url" content="https://secretcourtyardmilano.com/assets/images/La casa/Hero.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Interno appartamento Secret Courtyard Milano - Soggiorno moderno con design contemporaneo">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:site_name" content="Secret Courtyard Milano">
+    <meta property="og:locale" content="it_IT">
+
+    <!-- Twitter Card Meta Tags (ottimizzati) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Appartamento Secret Courtyard Milano | La Casa | Foto e Descrizione">
+    <meta name="twitter:description" content="Visita l'appartamento di 45 m² nel centro di Milano: soggiorno, camera, cucina e bagno completamente attrezzati. Check-in automatico 24/7.">
+    <meta name="twitter:image" content="https://secretcourtyardmilano.com/assets/images/La casa/Hero.jpg">
+    <meta name="twitter:image:alt" content="Interno appartamento Secret Courtyard Milano nel centro storico di Milano">
+
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" aria-label="Navigazione principale">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><a href="../index.html" style="color: inherit; text-decoration: none;" aria-label="Secret Courtyard Milano - Torna alla home">Secret Courtyard Milano</a></h1>
+                </div>
+
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button class="hamburger" aria-label="Menu di navigazione" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="../index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="la-casa.html" class="current-page" role="menuitem" aria-current="page">La Casa</a></li>
+                    <li role="none"><a href="mobilita.html" role="menuitem">Mobilità</a></li>
+                    <li role="none"><a href="scopri-milano.html" role="menuitem">Scopri Milano</a></li>
+                    <li role="none"><a href="la-ristrutturazione.html" role="menuitem">La Ristrutturazione</a></li>
+                    <li role="none"><a href="../index.html#booking" role="menuitem">Prenota</a></li>
+                    <li role="none"><a href="../index.html#contact" role="menuitem">Contatti</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(rgba(44, 85, 48, 0.3), rgba(44, 85, 48, 0.3)), url('../assets/images/La casa/Hero.jpg') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1 class="hero-title">La Casa</h1>
+            <p class="hero-subtitle">Tutto quello che devi sapere per il tuo soggiorno</p>
+            <p class="hero-address">Secret Courtyard Milano</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="la-casa">
+        <div class="container">
+
+
+
+            <!-- NUKI -->
+            <div class="la-casa-section">
+                <h3>🔑 NUKI</h3>
+                <div class="la-casa-content">
+                    <p>Accesso completamente automatizzato senza bisogno di chiavi fisiche:</p>
+                    <ul>
+                        <li>Ricevi i codici di accesso via email prima del tuo arrivo</li>
+                        <li>App NUKI per smartphone (iOS e Android)</li>
+                        <li>Accesso 24/7 senza orari di check-in fissi</li>
+                        <li>Massima sicurezza e comodità</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Nella corte -->
+            <div class="la-casa-section">
+                <h3>🏛️ Nella corte la casa si trova al piano terra</h3>
+                <div class="courtyard-images">
+                    <div class="image-grid">
+                        <div class="image-item">
+                            <img src="../assets/images/La casa/L'ingresso.jpg" alt="Ingresso di Secret Courtyard Milano nella corte storica di Via Lanzone" class="room-image" width="800" height="600">
+                            <p class="image-label">L'ingresso</p>
+                        </div>
+                        <div class="image-item">
+                            <img src="../assets/images/La casa/Il percorso.png" alt="Percorso di accesso a Secret Courtyard Milano attraverso la corte interna" class="room-image" width="800" height="600">
+                            <p class="image-label">Il percorso</p>
+                        </div>
+                        <div class="image-item">
+                            <img src="../assets/images/La casa/La casa.jpg" alt="Veduta esterna di Secret Courtyard Milano con facciata restaurata" class="room-image" width="800" height="600">
+                            <p class="image-label">La casa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transportation Section -->
+            <section class="transportation">
+                <div class="container">
+                    <h2 class="section-title">Come Raggiungerci</h2>
+
+                    <!-- Transfer Information Box -->
+                    <div class="regola-item full-width highlight" style="margin-bottom: 2rem;">
+                        <h4>🚗 Transfer Privato o Condiviso</h4>
+                        <p>Se hai bisogno di un transfer privato o in comune (per risparmiare qualche €) contattami al numero +39 3664162554 o scrivimi su WhatsApp!</p>
+                    </div>
+
+                    <div class="access-grid">
+                        <div class="access-card">
+                            <h3>✈️ Dagli Aeroporti</h3>
+                            <p>Malpensa, Linate e Bergamo</p>
+                            <a href="mobilita.html#dagli-aeroporti" class="access-link">Scopri le opzioni</a>
+                        </div>
+                        <div class="access-card">
+                            <h3>🚆 Dalle Stazioni</h3>
+                            <p>Centrale, Garibaldi e Cadorna</p>
+                            <a href="mobilita.html#dalle-stazioni" class="access-link">Vedi i percorsi</a>
+                        </div>
+                        <div class="access-card">
+                            <h3>🚗 Parcheggio</h3>
+                            <p>Parcheggi e Area C</p>
+                            <a href="mobilita.html#parcheggio" class="access-link">Informazioni utili</a>
+                        </div>
+                        <div class="access-card">
+                            <h3>🚇 Mezzi Pubblici</h3>
+                            <p>Metro, tram e autobus</p>
+                            <a href="mobilita.html#mezzi-pubblici" class="access-link">Consulta le linee</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Check-in e Check-out -->
+            <div class="la-casa-section">
+                <h3>📅 Check-in e Check-out</h3>
+
+                    <div class="time-info">
+                        <div class="time-item">
+                            <h3>🕒 Check-in</h3>
+                            <p>Dopo le 15:00</p>
+                        </div>
+                        <div class="time-item">
+                            <h3>🕚 Check-out</h3>
+                            <p>Entro le 11:00</p>
+                        </div>
+                    </div>
+
+                    <div class="checkin-note">
+                        <p><strong>Check-in anticipati e check-out posticipati</strong> sono disponibili solo su richiesta effettuata almeno il giorno prima dell'arrivo.</p>
+                    </div>
+
+                    <div class="baggage-info">
+                        <h4>🧳 Deposito bagagli</h4>
+                        <p>Se non sono disponibili check-in e check-out fuori orario, sono disponibili vari locker per lasciare i bagagli:</p>
+                        <ul>
+                            <li><a href="https://maps.app.goo.gl/CfyRzAf1Uh2MyZ8S6" target="_blank" style="text-decoration: none;">📍 Deposito bagagli 1</a></li>
+                            <li><a href="https://maps.app.goo.gl/Zo9BZVKBBHQ5EhKB6" target="_blank" style="text-decoration: none;">📍 Deposito bagagli 2</a></li>
+                            <li><a href="https://maps.app.goo.gl/yEatBR21Z6kMnrGh6" target="_blank" style="text-decoration: none;">📍 Deposito bagagli 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dotazioni -->
+            <div class="la-casa-section">
+                <h3>🏠 Dotazioni</h3>
+                <div class="la-casa-grid">
+                    <div class="la-casa-column">
+                        <div class="dotazione-item">
+                            <h4>🛏️ Letto matrimoniale</h4>
+                            <p>Sul soppalco<br><strong>Misure: 180x200 cm</strong></p>
+                        </div>
+                        <div class="dotazione-item">
+                            <h4>🛋️ Divano letto</h4>
+                            <p>In soggiorno<br><strong>Misure: 135x200 cm</strong><br>(Togliere i cuscini del divano; tira forte la corda arancione; prendi i cuscini nell'armadio di fianco alla televisione; per chiuderlo ripeti gli stessi passaggi al contrario)</p>
+                        </div>
+                        <div class="dotazione-item">
+                            <h4>❄️ Climatizzazione</h4>
+                            <p>Condizionatore a pompa di calore per raffreddare d'estate e riscaldare d'inverno</p>
+                        </div>
+                        <div class="dotazione-item">
+                            <h4>🔍 Extra</h4>
+                            <p>• Phon, carta igienica di scorta e asciugamani extra in caso di 2+ ospiti (sotto il lavandino)<br>• Coperte extra nell'armadio in soggiorno<br>• Ciabatte per tutti gli ospiti</p>
+                        </div>
+                    </div>
+                    <div class="la-casa-column">
+                        <div class="dotazione-item">
+                            <h4>🧺 Biancheria</h4>
+                            <p>Lenzuola pulite e 3 asciugamani a persona</p>
+                        </div>
+                        <div class="dotazione-item">
+                            <h4>🧴 Prodotti bagno</h4>
+                            <p>Shampoo, bagnoschiuma, sapone per le mani e sapone intimo</p>
+                        </div>
+                        <div class="dotazione-item">
+                            <h4>☕ Cucina</h4>
+                            <p>Macchinetta del caffè con capsule, tè verde, tè nero, camomilla, olio, sale</p>
+                        </div>
+                        <div class="dotazione-item">
+                            <h4>📶 Wi-Fi</h4>
+                            <p><strong>Nome rete:</strong> Secret Courtyard Milano<br>All'interno dell'appartamento troverai un QR code per collegarti direttamente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Come funziona -->
+            <div class="la-casa-section">
+                <h3>⚙️ Come funziona</h3>
+                <div class="la-casa-grid">
+                    <div class="la-casa-column">
+                        <div class="funziona-item">
+                            <h4>📺 Televisione e pala</h4>
+                            <p>La televisione e la pala funzionano con i rispettivi telecomandi. Il telecomando della pala ti consente di accenderla e regolare la velocità per un comfort ottimale.</p>
+                        </div>
+                        <div class="funziona-item">
+                            <h4>🍳 Piano a induzione e specchio del bagno</h4>
+                            <p>Attivabili con tasti touch sul dispositivo stesso</p>
+                        </div>
+                        <div class="funziona-item">
+                            <h4>🧼 Lavatrice e lavastoviglie</h4>
+                            <p>Ti basta caricare l'elettrodomestico, accenderlo e seguire le istruzioni presenti sul dispositivo</p>
+                        </div>
+                    </div>
+                    <div class="la-casa-column">
+                        <div class="funziona-item">
+                            <h4>❄️ Condizionatore</h4>
+                            <p>Il sistema a pompa di calore azionabile con il telecomando rinfresca nelle giornate estive, riscalda efficacemente durante l'inverno e deumidifica per garantire il comfort in ogni stagione. </p>
+                        </div>
+                        <div class="funziona-item">
+                            <h4>🪟 Finestra</h4>
+                            <p>Per aprire la parte sinistra della finestra tira la leva nera posta alla sua base. Quando chiudi la finestra ricorda di chiudere la leva nera per bloccarla. Per nessun motivo devi usare la forza.</p>
+                        </div>
+                        <div class="funziona-item">
+                            <h4>🪑 Tavolo</h4>
+                            <p>Il tavolo è dotato di ruote per facilitarne lo spostamento, se necessario premi le ruote con il piede per attivare il freno (farlo su due ruote è sufficiente)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regole della casa -->
+            <div class="la-casa-section">
+                <h3>📜 Regole della casa</h3>
+                <div class="la-casa-content">
+                    <div class="regole-grid">
+                        <div class="regola-item full-width highlight">
+                            <h4>🔇 Rispetto della quiete</h4>
+                            <p>Rispetta la quiete del condominio: ti trovi in un palazzo storico. I vicini non esitano a contattare le autorità in caso di rumori eccessivi.</p>
+                        </div>
+                        <div class="regola-item">
+                            <h4>🚭 No fumo</h4>
+                            <p>Non è consentito fumare</p>
+                        </div>
+                        <div class="regola-item">
+                            <h4>🎉 No feste</h4>
+                            <p>Non sono ammesse feste</p>
+                        </div>
+                        <div class="regola-item">
+                            <h4>🌬️ Finestra e aria condizionata</h4>
+                            <p>Non tenere la finestra aperta e l'aria condizionata accesa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prima del Check-out -->
+            <div class="la-casa-section">
+                <h3>📋 Prima del Check-out</h3>
+                <div class="la-casa-content">
+                    <ul>
+                        <li><strong>Lavastoviglie:</strong> Inserire i piatti sporchi senza farla partire</li>
+                        <li><strong>Rifiuti:</strong> Smistare correttamente negli appositi contenitori sotto il lavandino</li>
+                        <li><strong>Spegnere tutto:</strong> luci, condizionatore, pala, TV e ventola del bagno (interruttore a sinistra dello specchio)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tassa di soggiorno -->
+            <div class="la-casa-section">
+                <h3>💰 Tassa di soggiorno</h3>
+                <div class="la-casa-content">
+                    <p>Come previsto dal Comune di Milano, la tassa di soggiorno è di €6.30 a testa a notte.</p>
+                    <p>Sono esclusi:</p>
+                    <ul>
+                        <li>Chi ha prenotato con Airbnb</li>
+                        <li>Minori di 18 anni (se segnalati come minori al momento della prenotazione)</li>
+                        <li>Residenti nel Comune di Milano</li>
+                        <li>Portatori di disabilità con i loro accompagnatori</li>
+                    </ul>
+
+                    <div class="payment-methods">
+                        <h4>Metodi di pagamento disponibili:</h4>
+                        <div class="payment-grid">
+                            <div class="payment-option">
+                                <h5>PayPal</h5>
+                                <div class="qr-image">
+                                    <img src="../assets/images/QR code/Paypal.png" alt="QR Code PayPal" srcset="../assets/images/QR code/Paypal-small.png 480w, ../assets/images/QR code/Paypal-medium.png 768w, ../assets/images/QR code/Paypal-large.png 1200w, ../assets/images/QR code/Paypal-xlarge.png 1920w" sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw" width="800" height="600">
+                                </div>
+                            </div>
+                            <div class="payment-option">
+                                <h5>Revolut</h5>
+                                <div class="qr-image">
+                                    <img src="../assets/images/QR code/Revolut.png" alt="QR Code Revolut" srcset="../assets/images/QR code/Revolut-small.png 480w, ../assets/images/QR code/Revolut-medium.png 768w, ../assets/images/QR code/Revolut-large.png 1200w, ../assets/images/QR code/Revolut-xlarge.png 1920w" sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw" width="800" height="600">
+                                </div>
+                            </div>
+                            <div class="payment-option">
+                                <h5>Satispay</h5>
+                                <div class="qr-image">
+                                    <img src="../assets/images/QR code/Satispay.png" alt="QR Code Satispay" srcset="../assets/images/QR code/Satispay-small.png 480w, ../assets/images/QR code/Satispay-medium.png 768w, ../assets/images/QR code/Satispay-large.png 1200w, ../assets/images/QR code/Satispay-xlarge.png 1920w" sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw" width="800" height="600">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>Chi non dispone di questi metodi di pagamento può contattare l'host per mettersi d'accordo su modalità alternative.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Gallery Icon -->
+    <div class="gallery-icon" id="gallery-icon">
+        <button class="gallery-button" aria-label="Apri galleria immagini">
+            <span class="gallery-icon-text">📷</span>
+        </button>
+    </div>
+
+    <!-- Gallery Lightbox -->
+    <div class="gallery-lightbox" id="gallery-lightbox">
+        <div class="gallery-lightbox-content">
+            <button class="gallery-lightbox-close" id="gallery-lightbox-close">&times;</button>
+            <button class="gallery-lightbox-nav gallery-lightbox-prev" id="gallery-lightbox-prev">❮</button>
+            <button class="gallery-lightbox-nav gallery-lightbox-next" id="gallery-lightbox-next">❯</button>
+            <img class="gallery-lightbox-image" id="gallery-lightbox-image" src="" alt="">
+            <div class="gallery-lightbox-counter" id="gallery-lightbox-counter"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Secret Courtyard Milano</h3>
+                    <p>Un'esperienza autentica nel cuore di Milano</p>
+                    <p>Via Lanzone 5, 20123 Milano</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Link Rapidi</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="la-casa.html">La Casa</a></li>
+                        <li><a href="mobilita.html">Mobilità</a></li>
+                        <li><a href="scopri-milano.html">Scopri Milano</a></li>
+                        <li><a href="../index.html#booking">Prenota</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contatti</h4>
+                    <ul>
+                        <li><a href="tel:+393664162554">+39 366 416 2554</a></li>
+                        <li><a href="mailto:marcototi98@gmail.com">marcototi98@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Secret Courtyard Milano. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">&times;</button>
+            <img class="lightbox-image" id="lightbox-image" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

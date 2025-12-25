@@ -1,0 +1,20 @@
+assets\images\Home\Bagno.png|assets\images\Home\Bagno.webp
+assets\images\La casa\Il percorso.png|assets\images\La casa\Il percorso.webp
+assets\images\QR code\Paypal.png|assets\images\QR code\Paypal.webp
+assets\images\QR code\Revolut.png|assets\images\QR code\Revolut.webp
+assets\images\QR code\Satispay.png|assets\images\QR code\Satispay.webp
+assets\images\QR code\original_backup\Paypal.png|assets\images\QR code\original_backup\Paypal.webp
+assets\images\QR code\original_backup\Revolut.png|assets\images\QR code\original_backup\Revolut.webp
+assets\images\QR code\original_backup\Satispay.png|assets\images\QR code\original_backup\Satispay.webp
+assets\images\La casa\original_backup\Il percorso.png|assets\images\La casa\original_backup\Il percorso.webp
+assets\images\Home\original_backup\Bagno.png|assets\images\Home\original_backup\Bagno.webp
+assets\images\backup_original\Home\Bagno.png|assets\images\backup_original\Home\Bagno.webp
+assets\images\backup_original\La casa\Il percorso.png|assets\images\backup_original\La casa\Il percorso.webp
+assets\images\backup_original\QR code\Paypal.png|assets\images\backup_original\QR code\Paypal.webp
+assets\images\backup_original\QR code\Revolut.png|assets\images\backup_original\QR code\Revolut.webp
+assets\images\backup_original\QR code\Satispay.png|assets\images\backup_original\QR code\Satispay.webp
+assets\images\backup_original\QR code\original_backup\Paypal.png|assets\images\backup_original\QR code\original_backup\Paypal.webp
+assets\images\backup_original\QR code\original_backup\Revolut.png|assets\images\backup_original\QR code\original_backup\Revolut.webp
+assets\images\backup_original\QR code\original_backup\Satispay.png|assets\images\backup_original\QR code\original_backup\Satispay.webp
+assets\images\backup_original\La casa\original_backup\Il percorso.png|assets\images\backup_original\La casa\original_backup\Il percorso.webp
+assets\images\backup_original\Home\original_backup\Bagno.png|assets\images\backup_original\Home\original_backup\Bagno.webp

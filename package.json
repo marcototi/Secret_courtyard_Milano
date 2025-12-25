@@ -1,0 +1,51 @@
+{
+  "name": "secret-courtyard-milano",
+  "version": "1.0.0",
+  "description": "Secret Courtyard Milano - Vacation rental website",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:html && npm run test:css && npm run test:accessibility && npm run test:performance",
+    "test:html": "html-validator --file website/index.html --verbose",
+    "test:css": "css-validator website/assets/css/main.css",
+    "test:accessibility": "pa11y-ci --config pa11y-ci.json",
+    "test:performance": "lhci autorun",
+    "test:security": "npm audit",
+    "dev": "serve website -p 3000",
+    "build": "echo 'Static site - no build required'",
+    "lint:html": "htmlhint website/**/*.html",
+    "lint:css": "stylelint website/assets/css/**/*.css",
+    "lint:js": "eslint website/assets/js/**/*.js",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "format": "prettier --write website/**/*.{html,css,js}",
+    "optimize:images": "python optimize-images-simple.py",
+    "deploy:preview": "netlify deploy --dir=website",
+    "deploy:production": "netlify deploy --dir=website --prod"
+  },
+  "keywords": [
+    "vacation-rental",
+    "milano",
+    "static-site",
+    "airbnb-alternative"
+  ],
+  "author": "Secret Courtyard Milano",
+  "license": "MIT",
+  "devDependencies": {
+    "@lhci/cli": "^0.12.0",
+    "css-validator": "^0.11.0",
+    "eslint": "^8.56.0",
+    "html-validator-cli": "^9.0.0",
+    "htmlhint": "^1.1.4",
+    "pa11y-ci": "^3.0.1",
+    "prettier": "^3.1.1",
+    "serve": "^14.2.1",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0"
+  },
+  "optionalDependencies": {
+    "pillow": ">=9.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

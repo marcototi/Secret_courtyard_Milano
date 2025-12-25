@@ -1,0 +1,54 @@
+# File temporanei e di sistema
+.tmp.driveupload/
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+*.log
+
+# Backup delle immagini (troppo grandi per Git)
+backup-images-*/
+website/assets/images/backup_original/
+website/assets/images/*/original_backup/
+
+# File di backup HTML
+*.backup
+*.bak
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Report generati
+image-optimization-report.txt
+png-to-webp-map.txt
+
+# Immagini ottimizzate (già incluse in website/assets/images/)
+# Non includere duplicati di backup
+
+# File di sistema Windows
+Desktop.ini
+
+# Log files
+*.log
