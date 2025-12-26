@@ -176,14 +176,8 @@ function initializeBookingForm() {
             timestamp: new Date().toISOString()
         };
 
-        // In a real application, you would send this data to a server
-        console.log('Booking data:', bookingData);
-
-        // Show confirmation modal
-        showConfirmationModal(bookingData);
-
-        // Reset form (optional)
-        // form.reset();
+        // Invia i dati al server PHP
+        sendBookingData(bookingData);
     });
 
     // Modal close handlers
@@ -321,37 +315,29 @@ function showConfirmationModal(bookingData) {
     const modal = document.getElementById('confirmation-modal');
     if (!modal) return;
 
-    // Update modal with booking details (optional)
-    const messageElement = modal.querySelector('.modal-message');
-    if (messageElement && bookingData.checkin && bookingData.checkout) {
-        const checkinDate = formatDateForDisplay(bookingData.checkin);
-        const checkoutDate = formatDateForDisplay(bookingData.checkout);
-
-        messageElement.innerHTML = `
-            Grazie <strong>${bookingData.name}</strong> per la tua richiesta di prenotazione!<br><br>
-            <strong>Periodo:</strong> ${checkinDate} - ${checkoutDate}<br>
-            <strong>Ospiti:</strong> ${bookingData.guests}<br>
-            <strong>Lingua preferita:</strong> ${bookingData.language}<br><br>
-            Ti contatteremo all'indirizzo <strong>${bookingData.email}</strong> entro 3 ore per confermare la disponibilità e procedere con il pagamento.
-        `;
-    }
+    // Non modificare più il messaggio - usa quello già presente nell'HTML
+    // Il messaggio è già stato impostato: "La tua richiesta è stata inviata correttamente, verrai contattato sul tuo telefono nelle prossime ore."
 
     // Show modal
     modal.classList.add('active');
 
     // Reset error scroll flag
     window.scrolledToError = false;
-
-    // In a real application, you would send the data to a server here
-    // Example: sendBookingToServer(bookingData);
 }
 
-// Function to send booking data to server (example)
-function sendBookingToServer(bookingData) {
-    // This is where you would make an API call to your server
-    // Example using fetch:
-    /*
-    fetch('/api/bookings', {
+// Function to send booking data to PHP server
+function sendBookingData(bookingData) {
+    const form = document.getElementById('booking-form-element');
+    const modal = document.getElementById('confirmation-modal');
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    // Disabilita il pulsante durante l'invio
+    const originalText = submitButton.textContent;
+    submitButton.textContent = 'Invio in corso...';
+    submitButton.disabled = true;
+
+    // Invia i dati allo script PHP
+    fetch('/api/send_booking.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -360,12 +346,26 @@ function sendBookingToServer(bookingData) {
     })
     .then(response => response.json())
     .then(data => {
-        console.log('Booking saved:', data);
+        if (data.success) {
+            console.log('Email inviata con successo:', data);
+            // Mostra la modal di conferma
+            showConfirmationModal(bookingData);
+            // Resetta il form
+            form.reset();
+        } else {
+            console.error('Errore nell\'invio dell\'email:', data.message);
+            alert('Si è verificato un errore nell\'invio della richiesta. Riprova più tardi.');
+        }
     })
     .catch(error => {
-        console.error('Error saving booking:', error);
+        console.error('Errore di rete:', error);
+        alert('Errore di connessione. Riprova più tardi.');
+    })
+    .finally(() => {
+        // Riabilita il pulsante
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
     });
-    */
 }
 
 // Add some basic error styling

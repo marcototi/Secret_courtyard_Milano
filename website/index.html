@@ -554,16 +554,31 @@
                 </div>
                 <div class="contact-form">
                     <h3>Invia un Messaggio</h3>
-                    <form>
-                        <input type="text" placeholder="Nome" required>
-                        <input type="email" placeholder="Email" required>
-                        <textarea placeholder="Messaggio" rows="4" required></textarea>
+                    <form id="contact-form">
+                        <input type="text" name="name" placeholder="Nome" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Messaggio" rows="4" required></textarea>
                         <button type="submit" class="cta-button">Invia Messaggio</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Contact Confirmation Modal -->
+    <div id="contact-confirmation-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="contact-modal-close">&times;</button>
+            <div class="modal-icon">✅</div>
+            <h2 class="modal-title">Messaggio Inviato con Successo!</h2>
+            <p class="modal-message">
+                La tua richiesta è stata inviata correttamente, verrai contattato nelle prossime ore.
+            </p>
+            <div class="modal-actions">
+                <button id="contact-modal-close-btn" class="modal-button">Chiudi</button>
+            </div>
+        </div>
+    </div>
     </main>
 
     <!-- Schema.org Structured Data -->

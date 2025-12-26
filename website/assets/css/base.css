@@ -957,7 +957,7 @@ img[src*="../assets/images/La ristrutturazione/Bagno dopo.jpg"],
 
 /* Booking Page Styles */
 .booking-hero {
-    background: linear-gradient(rgba(44, 85, 48, 0.3), rgba(44, 85, 48, 0.3)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+    background: linear-gradient(rgba(44, 85, 48, 0.3), rgba(44, 85, 48, 0.3)), url('../images/Galleria/1.jpg') center 60%/cover no-repeat;
     padding: 80px 0;
     text-align: center;
     color: var(--white);
@@ -4384,3 +4384,52 @@ html {
         url('../images/Home/Hero.jpg') 2x
       );
 */
+
+/* Stili per la sezione NUKI con immagine */
+.la-casa-content.nuki-section {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.la-casa-content.nuki-section .nuki-text {
+    flex: 1;
+    min-width: 200px;
+    max-width: 60%; /* Limita la larghezza del testo */
+}
+
+.la-casa-content.nuki-section .nuki-image {
+    flex-shrink: 0;
+    text-align: center;
+    margin: 0 auto !important; /* Centra l'immagine nello spazio rimanente */
+}
+
+.la-casa-content.nuki-section .nuki-image img {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 150px;
+    height: auto;
+}
+
+/* Responsive per mobile */
+@media (max-width: 768px) {
+    .la-casa-content.nuki-section {
+        flex-direction: column !important;
+        gap: 1.5rem;
+    }
+
+    .la-casa-content.nuki-section .nuki-text {
+        margin-right: 0 !important;
+    }
+
+    .la-casa-content.nuki-section .nuki-image {
+        order: -1 !important;
+        margin-bottom: 1rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .la-casa-content.nuki-section .nuki-image img {
+        max-width: 120px;
+    }
+}

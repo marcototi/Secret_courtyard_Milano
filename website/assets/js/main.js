@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeGallery();
     initializeCalendar();
     initializeHamburgerMenu();
-
+    initializeContactForm();
 
     // Check if we're on the mobility page and initialize tabs
     if (document.querySelector('.mobility-tabs-section')) {
@@ -423,4 +423,104 @@ function initializeHamburgerMenu() {
         }
     });
 }
+
+// Function to initialize contact form
+function initializeContactForm() {
+    const form = document.getElementById('contact-form');
+    const modal = document.getElementById('contact-confirmation-modal');
+    const modalClose = document.getElementById('contact-modal-close');
+    const modalCloseBtn = document.getElementById('contact-modal-close-btn');
+
+    if (!form) return;
+
+    // Form submission handler
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get form data
+        const formData = new FormData(form);
+        const contactData = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            message: formData.get('message'),
+            timestamp: new Date().toISOString(),
+            page: 'Home - Contatti'
+        };
+
+        // Send data to PHP server
+        sendContactData(contactData);
+    });
+
+    // Modal close handlers
+    if (modalClose) {
+        modalClose.addEventListener('click', function() {
+            modal.classList.remove('active');
+        });
+    }
+
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', function() {
+            modal.classList.remove('active');
+        });
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            modal.classList.remove('active');
+        }
+    });
+
+    // Close modal when clicking outside
+    document.addEventListener('click', function(e) {
+        if (modal.classList.contains('active') &&
+            !modal.querySelector('.modal-content').contains(e.target)) {
+            modal.classList.remove('active');
+        }
+    });
+}
+
+// Function to send contact data to PHP server
+function sendContactData(contactData) {
+    const form = document.getElementById('contact-form');
+    const modal = document.getElementById('contact-confirmation-modal');
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    // Disabilita il pulsante durante l'invio
+    const originalText = submitButton.textContent;
+    submitButton.textContent = 'Invio in corso...';
+    submitButton.disabled = true;
+
+    // Invia i dati allo script PHP
+    fetch('/api/send_contact.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contactData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log('Email contatti inviata con successo:', data);
+            // Mostra la modal di conferma
+            modal.classList.add('active');
+            // Resetta il form
+            form.reset();
+        } else {
+            console.error('Errore nell\'invio dell\'email contatti:', data.message);
+            alert('Si è verificato un errore nell\'invio del messaggio. Riprova più tardi.');
+        }
+    })
+    .catch(error => {
+        console.error('Errore di rete contatti:', error);
+        alert('Errore di connessione. Riprova più tardi.');
+    })
+    .finally(() => {
+        // Riabilita il pulsante
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+    });
+}
+
 
