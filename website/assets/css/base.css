@@ -895,6 +895,17 @@ img[src*="../assets/images/La ristrutturazione/Bagno dopo.jpg"],
     background: #f9f9f9;
 }
 
+.calendar-day.past-date {
+    color: #999;
+    background: #f5f5f5;
+    text-decoration: line-through;
+}
+
+.calendar-day.past-date:hover {
+    background: #f5f5f5;
+    cursor: not-allowed;
+}
+
 .date-selection-info {
     margin-top: 20px;
     padding: 15px;

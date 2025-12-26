@@ -218,6 +218,13 @@ function initializeCalendar() {
         );
     }
 
+    function isDateInPast(date) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Reset ore per confronto solo data
+        date.setHours(0, 0, 0, 0); // Reset ore per confronto solo data
+        return date < today;
+    }
+
     function isDateInRange(date) {
         if (!startDate || !endDate) return false;
         const dateStr = formatDate(date);
@@ -289,6 +296,12 @@ function initializeCalendar() {
                 dayElement.classList.add('disabled');
             }
 
+            // Controlla se è una data passata
+            if (isDateInPast(date)) {
+                dayElement.classList.add('disabled');
+                dayElement.classList.add('past-date');
+            }
+
             // Controlla se è selezionato
             if (startDate && formatDate(date) === formatDate(startDate)) {
                 dayElement.classList.add('selected');
@@ -299,7 +312,7 @@ function initializeCalendar() {
             }
 
             // Event listener per selezione
-            if (!isDateBooked(date)) {
+            if (!isDateBooked(date) && !isDateInPast(date)) {
                 dayElement.addEventListener('click', () => handleDateClick(date));
             }
 
@@ -328,6 +341,11 @@ function initializeCalendar() {
     }
 
     function handleDateClick(date) {
+        // Impedisci selezione di date passate
+        if (isDateInPast(date)) {
+            return; // Non fare nulla se la data è passata
+        }
+
         if (!startDate || (startDate && endDate)) {
             // Inizia nuova selezione
             startDate = date;
