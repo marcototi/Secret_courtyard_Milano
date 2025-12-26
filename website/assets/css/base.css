@@ -957,7 +957,7 @@ img[src*="../assets/images/La ristrutturazione/Bagno dopo.jpg"],
 
 /* Booking Page Styles */
 .booking-hero {
-    background: linear-gradient(rgba(44, 85, 48, 0.3), rgba(44, 85, 48, 0.3)), url('../images/Home/Hero.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(44, 85, 48, 0.3), rgba(44, 85, 48, 0.3)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
     padding: 80px 0;
     text-align: center;
     color: var(--white);
