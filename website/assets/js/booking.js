@@ -75,41 +75,71 @@ function calculateNights(checkin, checkout) {
 
 function calculateAndDisplayPrice(nights) {
     const nightlyRate = 120; // € per notte (prezzo di esempio)
+    const touristTaxPerPersonPerNight = 9.5; // € tassa di soggiorno a testa a notte
     const totalNights = parseInt(nights) || 1;
-    const totalPrice = nightlyRate * totalNights;
 
-    // Apply discount for longer stays
-    let finalPrice = totalPrice;
+    // Calcolo prezzo base
+    const basePrice = nightlyRate * totalNights;
+
+    // Applica sconto solo per soggiorni lunghi (7+ notti)
+    let finalPrice = basePrice;
     let discount = 0;
 
     if (totalNights >= 7) {
         discount = 0.10; // 10% discount for 7+ nights
-    } else if (totalNights >= 3) {
-        discount = 0.05; // 5% discount for 3-6 nights
+        finalPrice = basePrice * (1 - discount);
     }
 
-    if (discount > 0) {
-        finalPrice = totalPrice * (1 - discount);
-    }
+    // Aggiungi informazione tassa di soggiorno (calcolata separatamente)
+    const touristTaxNote = `+ Tassa di soggiorno: €${touristTaxPerPersonPerNight.toFixed(2)} a testa a notte (esclusi minori di 18 anni)`;
 
     // Format price for display
     document.getElementById('total-price').textContent = `€ ${finalPrice.toFixed(2)}`;
 
-    // Add discount note if applicable
+    // Aggiungi note per tassa di soggiorno
+    const taxNoteElement = document.createElement('small');
+    taxNoteElement.className = 'tax-note';
+    taxNoteElement.textContent = touristTaxNote;
+    taxNoteElement.style.color = 'var(--text-light)';
+    taxNoteElement.style.display = 'block';
+    taxNoteElement.style.marginTop = '5px';
+    taxNoteElement.style.fontSize = '0.85rem';
+
+    // Aggiungi nota sconto commissioni portali
+    const commissionNote = document.createElement('small');
+    commissionNote.className = 'commission-note';
+    commissionNote.textContent = 'Prenotando dal nostro sito risparmi le spese di commissione dei portali!';
+    commissionNote.style.color = 'var(--secondary-color)';
+    commissionNote.style.display = 'block';
+    commissionNote.style.marginTop = '8px';
+    commissionNote.style.fontSize = '0.85rem';
+    commissionNote.style.fontWeight = '600';
+
+    const priceContainer = document.querySelector('.summary-price');
+
+    // Rimuovi note precedenti se esistono
+    const existingTaxNote = priceContainer.querySelector('.tax-note');
+    const existingCommissionNote = priceContainer.querySelector('.commission-note');
+    const existingDiscountNote = priceContainer.querySelector('.discount-note');
+
+    if (existingTaxNote) existingTaxNote.remove();
+    if (existingCommissionNote) existingCommissionNote.remove();
+    if (existingDiscountNote) existingDiscountNote.remove();
+
+    // Aggiungi nuove note
+    priceContainer.appendChild(taxNoteElement);
+    priceContainer.appendChild(commissionNote);
+
+    // Aggiungi nota sconto se applicabile
     if (discount > 0) {
         const discountNote = document.createElement('small');
         discountNote.className = 'discount-note';
-        discountNote.textContent = `(Sconto ${(discount * 100)}% applicato)`;
+        discountNote.textContent = `(Sconto ${(discount * 100)}% per soggiorni lunghi applicato)`;
         discountNote.style.color = 'var(--secondary-color)';
         discountNote.style.display = 'block';
         discountNote.style.marginTop = '5px';
         discountNote.style.fontSize = '0.85rem';
-
-        const priceContainer = document.querySelector('.summary-price');
-        const existingNote = priceContainer.querySelector('.discount-note');
-        if (!existingNote) {
-            priceContainer.appendChild(discountNote);
-        }
+        priceContainer.appendChild(discountNote);
     }
 }
 
@@ -136,7 +166,7 @@ function initializeBookingForm() {
             name: formData.get('name'),
             email: formData.get('email'),
             phone: formData.get('phone'),
-            country: formData.get('country'),
+            language: formData.get('language'),
             guests: formData.get('guests'),
             message: formData.get('message'),
             checkin: formData.get('hidden_checkin'),
@@ -300,7 +330,8 @@ function showConfirmationModal(bookingData) {
         messageElement.innerHTML = `
             Grazie <strong>${bookingData.name}</strong> per la tua richiesta di prenotazione!<br><br>
             <strong>Periodo:</strong> ${checkinDate} - ${checkoutDate}<br>
-            <strong>Ospiti:</strong> ${bookingData.guests}<br><br>
+            <strong>Ospiti:</strong> ${bookingData.guests}<br>
+            <strong>Lingua preferita:</strong> ${bookingData.language}<br><br>
             Ti contatteremo all'indirizzo <strong>${bookingData.email}</strong> entro 3 ore per confermare la disponibilità e procedere con il pagamento.
         `;
     }
