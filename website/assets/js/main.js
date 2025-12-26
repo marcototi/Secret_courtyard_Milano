@@ -265,6 +265,13 @@ function initializeCalendar() {
                 ${startDate ? `<p>Check-in: <strong>${startDate.toLocaleDateString('it-IT')}</strong></p>` : ''}
                 ${endDate ? `<p>Check-out: <strong>${endDate.toLocaleDateString('it-IT')}</strong></p>` : ''}
                 ${startDate && endDate ? `<p>Notti: <strong>${Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24))}</strong></p>` : ''}
+                ${startDate && endDate ? `
+                <div class="booking-action">
+                    <a href="./pages/prenotazione.html?checkin=${formatDate(startDate)}&checkout=${formatDate(endDate)}&nights=${Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24))}" class="booking-button">
+                        Prenota
+                    </a>
+                </div>
+                ` : ''}
             </div>
             ` : ''}
         `;
