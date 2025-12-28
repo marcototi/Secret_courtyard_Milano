@@ -13,9 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Check if we're on the mobility page and initialize tabs
     if (document.querySelector('.mobility-tabs-section')) {
-        // Load mobility tabs functionality
         console.log('Initializing mobility tabs');
-        // The mobility tabs are initialized by their own script
     }
 });
 
@@ -31,55 +29,31 @@ function initializeLightbox() {
         return;
     }
 
-    // Get all room images in the presentation section (index.html)
     const presentationImages = document.querySelectorAll('.presentation-images .room-image');
-
-    // Get all courtyard images (la-casa.html)
     const courtyardImages = document.querySelectorAll('.courtyard-images .room-image');
-
-    // Get all gallery images (la-ristrutturazione.html)
     const galleryImages = document.querySelectorAll('.gallery-grid .room-image');
-
-    // Combine all sets of images
     const allImages = [...presentationImages, ...courtyardImages, ...galleryImages];
 
-    // Add click event to each image
     allImages.forEach(image => {
         image.addEventListener('click', function() {
             const src = this.getAttribute('src');
             const alt = this.getAttribute('alt');
-
             lightboxImage.setAttribute('src', src);
             lightboxImage.setAttribute('alt', alt);
-            if (lightboxCaption) {
-                lightboxCaption.textContent = ''; // No caption in lightbox
-            }
+            if (lightboxCaption) lightboxCaption.textContent = '';
             lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            document.body.style.overflow = 'hidden';
         });
     });
 
-    // Close lightbox
-    function closeLightbox() {
+    const closeLightbox = () => {
         lightbox.classList.remove('active');
-        document.body.style.overflow = ''; // Restore scrolling
-    }
+        document.body.style.overflow = '';
+    };
 
     lightboxClose.addEventListener('click', closeLightbox);
-
-    // Close lightbox when clicking outside the image
-    lightbox.addEventListener('click', function(e) {
-        if (e.target === lightbox) {
-            closeLightbox();
-        }
-    });
-
-    // Close lightbox with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-            closeLightbox();
-        }
-    });
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox(); });
 }
 
 // Function to initialize gallery
@@ -93,94 +67,41 @@ function initializeGallery() {
     const galleryLightboxNext = document.getElementById('gallery-lightbox-next');
     const galleryLightboxCounter = document.getElementById('gallery-lightbox-counter');
 
-    if (!galleryIcon || !galleryLightbox || !galleryLightboxImage) {
-        console.warn('Gallery elements not found');
-        return;
-    }
+    if (!galleryIcon || !galleryLightbox || !galleryLightboxImage) return;
 
-    // Array of gallery images (0 to 33, excluding 2)
     const galleryImages = [];
-    for (let i = 0; i <= 33; i++) {
-        if (i !== 2) { // Skip image 2
-            galleryImages.push(`assets/images/Galleria/${i}.jpg`);
-        }
-    }
+    for (let i = 0; i <= 33; i++) { if (i !== 2) galleryImages.push(`assets/images/Galleria/${i}.jpg`); }
 
     let currentGalleryIndex = 0;
 
-    // Open gallery lightbox
-    function openGallery() {
+    const updateGalleryImage = () => {
+        galleryLightboxImage.setAttribute('src', galleryImages[currentGalleryIndex]);
+        if (galleryLightboxCounter) galleryLightboxCounter.textContent = `${currentGalleryIndex + 1} / ${galleryImages.length}`;
+    };
+
+    const openGallery = () => {
         currentGalleryIndex = 0;
         updateGalleryImage();
         galleryLightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
-    }
+    };
 
-    // Close gallery lightbox
-    function closeGallery() {
+    const closeGallery = () => {
         galleryLightbox.classList.remove('active');
         document.body.style.overflow = '';
-    }
+    };
 
-    // Update gallery image and counter
-    function updateGalleryImage() {
-        galleryLightboxImage.setAttribute('src', galleryImages[currentGalleryIndex]);
-        if (galleryLightboxCounter) {
-            galleryLightboxCounter.textContent = `${currentGalleryIndex + 1} / ${galleryImages.length}`;
-        }
-    }
+    if (galleryButton) galleryButton.addEventListener('click', openGallery);
+    if (galleryLightboxClose) galleryLightboxClose.addEventListener('click', closeGallery);
+    if (galleryLightboxNext) galleryLightboxNext.addEventListener('click', () => { currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length; updateGalleryImage(); });
+    if (galleryLightboxPrev) galleryLightboxPrev.addEventListener('click', () => { currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length; updateGalleryImage(); });
 
-    // Next image
-    function nextImage() {
-        currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
-        updateGalleryImage();
-    }
-
-    // Previous image
-    function prevImage() {
-        currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
-        updateGalleryImage();
-    }
-
-    // Event listeners
-    if (galleryButton) {
-        galleryButton.addEventListener('click', openGallery);
-    }
-
-    if (galleryLightboxClose) {
-        galleryLightboxClose.addEventListener('click', closeGallery);
-    }
-
-    if (galleryLightboxNext) {
-        galleryLightboxNext.addEventListener('click', nextImage);
-    }
-
-    if (galleryLightboxPrev) {
-        galleryLightboxPrev.addEventListener('click', prevImage);
-    }
-
-    // Close gallery when clicking outside the image
-    galleryLightbox.addEventListener('click', function(e) {
-        if (e.target === galleryLightbox) {
-            closeGallery();
-        }
-    });
-
-    // Keyboard navigation
-    document.addEventListener('keydown', function(e) {
+    galleryLightbox.addEventListener('click', (e) => { if (e.target === galleryLightbox) closeGallery(); });
+    document.addEventListener('keydown', (e) => {
         if (!galleryLightbox.classList.contains('active')) return;
-
-        switch(e.key) {
-            case 'Escape':
-                closeGallery();
-                break;
-            case 'ArrowRight':
-                nextImage();
-                break;
-            case 'ArrowLeft':
-                prevImage();
-                break;
-        }
+        if (e.key === 'Escape') closeGallery();
+        if (e.key === 'ArrowRight') { currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length; updateGalleryImage(); }
+        if (e.key === 'ArrowLeft') { currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length; updateGalleryImage(); }
     });
 }
 
@@ -190,337 +111,65 @@ function initializeCalendar() {
     if (!calendarContainer) return;
 
     const dayNames = ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom'];
-    const monthNames = [
-        'Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno',
-        'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'
-    ];
+    const monthNames = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
 
     let currentDate = new Date();
     let startDate = null;
     let endDate = null;
     let isSelecting = false;
 
-    // Date prenotazioni (esempio)
     const bookedDates = [
         { start: '2025-01-10', end: '2025-01-15' },
         { start: '2025-02-05', end: '2025-02-10' },
         { start: '2025-03-20', end: '2025-03-25' }
     ];
 
-    function formatDate(date) {
-        return date.toISOString().split('T')[0];
-    }
-
-    function isDateBooked(date) {
-        const dateStr = formatDate(date);
-        return bookedDates.some(booking =>
-            dateStr >= booking.start && dateStr <= booking.end
-        );
-    }
-
-    function isDateInPast(date) {
-        const today = new Date();
-        today.setHours(0, 0, 0, 0); // Reset ore per confronto solo data
-        date.setHours(0, 0, 0, 0); // Reset ore per confronto solo data
-        return date < today;
-    }
-
-    function isDateInRange(date) {
-        if (!startDate || !endDate) return false;
-        const dateStr = formatDate(date);
-        const startStr = formatDate(startDate);
-        const endStr = formatDate(endDate);
-        return dateStr >= startStr && dateStr <= endStr;
-    }
+    const formatDate = (date) => date.toISOString().split('T')[0];
+    const isDateBooked = (date) => bookedDates.some(b => formatDate(date) >= b.start && formatDate(date) <= b.end);
+    const isDateInPast = (date) => { const t = new Date(); t.setHours(0,0,0,0); return date < t; };
 
     function renderCalendar() {
         const year = currentDate.getFullYear();
         const month = currentDate.getMonth();
-        const today = new Date();
-        const isCurrentMonth = today.getFullYear() === year && today.getMonth() === month;
-
-        // Calcola primo giorno del mese
         const firstDay = new Date(year, month, 1);
-        const lastDay = new Date(year, month + 1, 0);
-        const daysInMonth = lastDay.getDate();
-        const startingDay = firstDay.getDay();
-        // Aggiusta per Lun=0, Dom=6
-        const adjustedStartingDay = startingDay === 0 ? 6 : startingDay - 1;
+        const adjustedStartingDay = firstDay.getDay() === 0 ? 6 : firstDay.getDay() - 1;
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-        // Crea header
         calendarContainer.innerHTML = `
             <div class="calendar-header-simple">
                 <h3>${monthNames[month]} ${year}</h3>
                 <div class="calendar-nav-simple">
                     <button class="calendar-nav-btn-simple prev-month">‹</button>
-                    ${!isCurrentMonth ? `<button class="calendar-nav-btn-simple current-month" title="Torna al mese corrente">●</button>` : ''}
                     <button class="calendar-nav-btn-simple next-month">›</button>
                 </div>
             </div>
-            <div class="calendar-grid-simple">
-                ${dayNames.map(day => `<div class="calendar-day-header">${day}</div>`).join('')}
-            </div>
-            ${startDate || endDate ? `
-            <div class="date-selection-info">
-                ${startDate ? `<p>Check-in: <strong>${startDate.toLocaleDateString('it-IT')}</strong></p>` : ''}
-                ${endDate ? `<p>Check-out: <strong>${endDate.toLocaleDateString('it-IT')}</strong></p>` : ''}
-                ${startDate && endDate ? `<p>Notti: <strong>${Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24))}</strong></p>` : ''}
-                ${startDate && endDate ? `
-                <div class="booking-action">
-                    <a href="./pages/prenotazione.html?checkin=${formatDate(startDate)}&checkout=${formatDate(endDate)}&nights=${Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24))}" class="booking-button">
-                        Prenota
-                    </a>
-                </div>
-                ` : ''}
-            </div>
-            ` : ''}
-        `;
+            <div class="calendar-grid-simple">${dayNames.map(d => `<div class="calendar-day-header">${d}</div>`).join('')}</div>
+            ${startDate && endDate ? `
+                <div class="date-selection-info">
+                    <p>Notti: <strong>${Math.ceil((endDate - startDate) / 86400000)}</strong></p>
+                    <div class="booking-action"><a href="./pages/prenotazione.html?checkin=${formatDate(startDate)}&checkout=${formatDate(endDate)}&nights=${Math.ceil((endDate - startDate) / 86400000)}" class="booking-button">Prenota</a></div>
+                </div>` : ''}`;
 
-        const gridContainer = calendarContainer.querySelector('.calendar-grid-simple');
-
-        // Celle vuote all'inizio
-        for (let i = 0; i < adjustedStartingDay; i++) {
-            const emptyCell = document.createElement('div');
-            emptyCell.className = 'calendar-day empty';
-            gridContainer.appendChild(emptyCell);
-        }
-
-        // Giorni del mese
-        for (let day = 1; day <= daysInMonth; day++) {
-            const date = new Date(year, month, day);
-            const dayElement = document.createElement('div');
-            dayElement.className = 'calendar-day';
-            dayElement.textContent = day;
-            dayElement.dataset.date = formatDate(date);
-
-            // Controlla se è oggi
-            if (date.toDateString() === today.toDateString()) {
-                dayElement.classList.add('today');
+        const grid = calendarContainer.querySelector('.calendar-grid-simple');
+        for (let i = 0; i < adjustedStartingDay; i++) { const cell = document.createElement('div'); cell.className = 'calendar-day empty'; grid.appendChild(cell); }
+        for (let d = 1; d <= daysInMonth; d++) {
+            const date = new Date(year, month, d);
+            const el = document.createElement('div');
+            el.className = 'calendar-day' + (isDateBooked(date) || isDateInPast(date) ? ' disabled' : '');
+            el.textContent = d;
+            if (startDate && formatDate(date) === formatDate(startDate)) el.classList.add('selected');
+            if (endDate && formatDate(date) === formatDate(endDate)) el.classList.add('selected');
+            if (startDate && endDate && formatDate(date) > formatDate(startDate) && formatDate(date) < formatDate(endDate)) el.classList.add('in-range');
+            
+            if (!el.classList.contains('disabled')) {
+                el.addEventListener('click', () => {
+                    if (!startDate || (startDate && endDate)) { startDate = date; endDate = null; isSelecting = true; }
+                    else if (isSelecting && date > startDate) { endDate = date; isSelecting = false; }
+                    else { startDate = date; endDate = null; }
+                    renderCalendar();
+                });
             }
-
-            // Controlla se è prenotato
-            if (isDateBooked(date)) {
-                dayElement.classList.add('disabled');
-            }
-
-            // Controlla se è una data passata
-            if (isDateInPast(date)) {
-                dayElement.classList.add('disabled');
-                dayElement.classList.add('past-date');
-            }
-
-            // Controlla se è selezionato
-            if (startDate && formatDate(date) === formatDate(startDate)) {
-                dayElement.classList.add('selected');
-            } else if (endDate && formatDate(date) === formatDate(endDate)) {
-                dayElement.classList.add('selected');
-            } else if (isDateInRange(date)) {
-                dayElement.classList.add('in-range');
-            }
-
-            // Event listener per selezione
-            if (!isDateBooked(date) && !isDateInPast(date)) {
-                dayElement.addEventListener('click', () => handleDateClick(date));
-            }
-
-            gridContainer.appendChild(dayElement);
+            grid.appendChild(el);
         }
 
-        // Aggiungi event listeners per navigazione
-        calendarContainer.querySelector('.prev-month').addEventListener('click', () => {
-            currentDate.setMonth(currentDate.getMonth() - 1);
-            renderCalendar();
-        });
-
-        calendarContainer.querySelector('.next-month').addEventListener('click', () => {
-            currentDate.setMonth(currentDate.getMonth() + 1);
-            renderCalendar();
-        });
-
-        // Aggiungi event listener per tornare al mese corrente
-        const currentMonthBtn = calendarContainer.querySelector('.current-month');
-        if (currentMonthBtn) {
-            currentMonthBtn.addEventListener('click', () => {
-                currentDate = new Date();
-                renderCalendar();
-            });
-        }
-    }
-
-    function handleDateClick(date) {
-        // Impedisci selezione di date passate
-        if (isDateInPast(date)) {
-            return; // Non fare nulla se la data è passata
-        }
-
-        if (!startDate || (startDate && endDate)) {
-            // Inizia nuova selezione
-            startDate = date;
-            endDate = null;
-            isSelecting = true;
-        } else if (isSelecting && date > startDate) {
-            // Completa la selezione
-            endDate = date;
-            isSelecting = false;
-        } else if (date < startDate) {
-            // Se clicca una data precedente, resetta
-            startDate = date;
-            endDate = null;
-        }
-
-        renderCalendar();
-    }
-
-    // Inizializza calendario
-    renderCalendar();
-}
-
-// Function to initialize hamburger menu
-function initializeHamburgerMenu() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-menu a');
-
-    if (!hamburger || !navMenu) {
-        console.warn('Hamburger menu elements not found');
-        return;
-    }
-
-    // Toggle menu on hamburger click
-    hamburger.addEventListener('click', function() {
-        const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-        hamburger.setAttribute('aria-expanded', !isExpanded);
-        navMenu.classList.toggle('active');
-        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-    });
-
-    // Close menu when clicking on a link
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            hamburger.setAttribute('aria-expanded', 'false');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-    });
-
-    // Close menu with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-            hamburger.setAttribute('aria-expanded', 'false');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (navMenu.classList.contains('active') &&
-            !navMenu.contains(e.target) &&
-            !hamburger.contains(e.target)) {
-            hamburger.setAttribute('aria-expanded', 'false');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-}
-
-// Function to initialize contact form
-function initializeContactForm() {
-    const form = document.getElementById('contact-form');
-    const modal = document.getElementById('contact-confirmation-modal');
-    const modalClose = document.getElementById('contact-modal-close');
-    const modalCloseBtn = document.getElementById('contact-modal-close-btn');
-
-    if (!form) return;
-
-    // Form submission handler
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Get form data
-        const formData = new FormData(form);
-        const contactData = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            message: formData.get('message'),
-            timestamp: new Date().toISOString(),
-            page: 'Home - Contatti'
-        };
-
-        // Send data to PHP server
-        sendContactData(contactData);
-    });
-
-    // Modal close handlers
-    if (modalClose) {
-        modalClose.addEventListener('click', function() {
-            modal.classList.remove('active');
-        });
-    }
-
-    if (modalCloseBtn) {
-        modalCloseBtn.addEventListener('click', function() {
-            modal.classList.remove('active');
-        });
-    }
-
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            modal.classList.remove('active');
-        }
-    });
-
-    // Close modal when clicking outside
-    document.addEventListener('click', function(e) {
-        if (modal.classList.contains('active') &&
-            !modal.querySelector('.modal-content').contains(e.target)) {
-            modal.classList.remove('active');
-        }
-    });
-}
-
-// Function to send contact data to PHP server
-function sendContactData(contactData) {
-    const form = document.getElementById('contact-form');
-    const modal = document.getElementById('contact-confirmation-modal');
-    const submitButton = form.querySelector('button[type="submit"]');
-
-    // Disabilita il pulsante durante l'invio
-    const originalText = submitButton.textContent;
-    submitButton.textContent = 'Invio in corso...';
-    submitButton.disabled = true;
-
-    // Invia i dati allo script PHP
-    fetch('/api/send_contact.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(contactData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            console.log('Email contatti inviata con successo:', data);
-            // Mostra la modal di conferma
-            modal.classList.add('active');
-            // Resetta il form
-            form.reset();
-        } else {
-            console.error('Errore nell\'invio dell\'email contatti:', data.message);
-            alert('Si è verificato un errore nell\'invio del messaggio. Riprova più tardi.');
-        }
-    })
-    .catch(error => {
-        console.error('Errore di rete contatti:', error);
-        alert('Errore di connessione. Riprova più tardi.');
-    })
-    .finally(() => {
-        // Riabilita il pulsante
-        submitButton.textContent = originalText;
-        submitButton.disabled = false;
-    });
-}
-
-
+        calendarContainer.querySelector('.prev-month').addEventListener('click', () => { currentDate.set
