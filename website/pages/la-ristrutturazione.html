@@ -70,13 +70,28 @@
                 </button>
 
                 <ul class="nav-menu" role="menubar">
-                    <li role="none"><a href="../index.html" role="menuitem">Home</a></li>
-                    <li role="none"><a href="la-casa.html" role="menuitem">La Casa</a></li>
-                    <li role="none"><a href="mobilita.html" role="menuitem">Mobilità</a></li>
-                    <li role="none"><a href="scopri-milano.html" role="menuitem">Scopri Milano</a></li>
-                    <li role="none"><a href="la-ristrutturazione.html" class="current-page" role="menuitem" aria-current="page">La Ristrutturazione</a></li>
-                    <li role="none"><a href="../index.html#booking" role="menuitem">Prenota</a></li>
-                    <li role="none"><a href="../index.html#contact" role="menuitem">Contatti</a></li>
+                    <li role="none"><a href="../index.html" role="menuitem" data-i18n="nav_home">Home</a></li>
+                    <li role="none"><a href="la-casa.html" role="menuitem" data-i18n="nav_la_casa">La Casa</a></li>
+                    <li role="none"><a href="mobilita.html" role="menuitem" data-i18n="nav_mobilita">Mobilità</a></li>
+                    <li role="none"><a href="scopri-milano.html" role="menuitem" data-i18n="nav_scopri_milano">Scopri Milano</a></li>
+                    <li role="none"><a href="la-ristrutturazione.html" class="current-page" role="menuitem" aria-current="page" data-i18n="nav_ristrutturazione">La Ristrutturazione</a></li>
+                    <li role="none"><a href="../index.html#booking" role="menuitem" data-i18n="nav_booking">Prenota</a></li>
+                    <li role="none"><a href="../index.html#contact" role="menuitem" data-i18n="nav_contacts">Contatti</a></li>
+
+                    <!-- Language Selector -->
+                    <li class="language-selector" role="none">
+                        <div class="language-dropdown">
+                            <button class="language-toggle" aria-label="Seleziona lingua" aria-expanded="false">
+                                <span class="language-flag">🌐</span>
+                                <span class="language-current" data-i18n="language_selector">Lingua</span>
+                            </button>
+                            <ul class="language-options">
+                                <li><button class="language-option" data-lang="it">🇮🇹 <span data-i18n="language_it">Italiano</span></button></li>
+                                <li><button class="language-option" data-lang="en">🇬🇧 <span data-i18n="language_en">English</span></button></li>
+                                <li><button class="language-option" data-lang="es">🇪🇸 <span data-i18n="language_es">Español</span></button></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -363,6 +378,7 @@
         </div>
     </footer>
 
+    <script src="../assets/js/translations.js" defer></script>
     <script src="../assets/js/main.js" defer></script>
 </body>
 </html>
