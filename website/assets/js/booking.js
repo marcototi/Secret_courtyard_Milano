@@ -40,6 +40,11 @@ function updateBookingSummary(checkin, checkout, nights) {
     document.getElementById('nights-count').textContent = nights || calculateNights(checkin, checkout);
 
     // Store dates in hidden fields for form submission
+    const form = document.getElementById('booking-form-element');
+    
+    // Rimuovi eventuali campi nascosti preesistenti per evitare duplicati
+    form.querySelectorAll('input[type="hidden"]').forEach(el => el.remove());
+
     const hiddenCheckin = document.createElement('input');
     hiddenCheckin.type = 'hidden';
     hiddenCheckin.name = 'hidden_checkin';
@@ -50,7 +55,6 @@ function updateBookingSummary(checkin, checkout, nights) {
     hiddenCheckout.name = 'hidden_checkout';
     hiddenCheckout.value = checkout;
 
-    const form = document.getElementById('booking-form-element');
     form.appendChild(hiddenCheckin);
     form.appendChild(hiddenCheckout);
 }
@@ -74,29 +78,22 @@ function calculateNights(checkin, checkout) {
 }
 
 function calculateAndDisplayPrice(nights) {
-    const nightlyRate = 120; // € per notte (prezzo di esempio)
-    const touristTaxPerPersonPerNight = 9.5; // € tassa di soggiorno a testa a notte
+    const nightlyRate = 120; // € per notte
+    const touristTaxPerPersonPerNight = 9.5; // € tassa di soggiorno
     const totalNights = parseInt(nights) || 1;
 
-    // Calcolo prezzo base
     const basePrice = nightlyRate * totalNights;
-
-    // Applica sconto solo per soggiorni lunghi (7+ notti)
     let finalPrice = basePrice;
     let discount = 0;
 
     if (totalNights >= 7) {
-        discount = 0.10; // 10% discount for 7+ nights
+        discount = 0.10;
         finalPrice = basePrice * (1 - discount);
     }
 
-    // Aggiungi informazione tassa di soggiorno (calcolata separatamente)
     const touristTaxNote = `+ Tassa di soggiorno: €${touristTaxPerPersonPerNight.toFixed(2)} a testa a notte (esclusi minori di 18 anni)`;
-
-    // Format price for display
     document.getElementById('total-price').textContent = `€ ${finalPrice.toFixed(2)}`;
 
-    // Aggiungi note per tassa di soggiorno
     const taxNoteElement = document.createElement('small');
     taxNoteElement.className = 'tax-note';
     taxNoteElement.textContent = touristTaxNote;
@@ -105,7 +102,6 @@ function calculateAndDisplayPrice(nights) {
     taxNoteElement.style.marginTop = '5px';
     taxNoteElement.style.fontSize = '0.85rem';
 
-    // Aggiungi nota sconto commissioni portali
     const commissionNote = document.createElement('small');
     commissionNote.className = 'commission-note';
     commissionNote.textContent = 'Prenotando dal nostro sito risparmi le spese di commissione dei portali!';
@@ -116,21 +112,11 @@ function calculateAndDisplayPrice(nights) {
     commissionNote.style.fontWeight = '600';
 
     const priceContainer = document.querySelector('.summary-price');
+    priceContainer.querySelectorAll('.tax-note, .commission-note, .discount-note').forEach(el => el.remove());
 
-    // Rimuovi note precedenti se esistono
-    const existingTaxNote = priceContainer.querySelector('.tax-note');
-    const existingCommissionNote = priceContainer.querySelector('.commission-note');
-    const existingDiscountNote = priceContainer.querySelector('.discount-note');
-
-    if (existingTaxNote) existingTaxNote.remove();
-    if (existingCommissionNote) existingCommissionNote.remove();
-    if (existingDiscountNote) existingDiscountNote.remove();
-
-    // Aggiungi nuove note
     priceContainer.appendChild(taxNoteElement);
     priceContainer.appendChild(commissionNote);
 
-    // Aggiungi nota sconto se applicabile
     if (discount > 0) {
         const discountNote = document.createElement('small');
         discountNote.className = 'discount-note';
@@ -151,71 +137,37 @@ function initializeBookingForm() {
 
     if (!form) return;
 
-    // Form submission handler
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        // Validate form
-        if (!validateForm()) {
-            return;
-        }
+        if (!validateForm()) return;
 
-        // Get form data
         const formData = new FormData(form);
         const bookingData = {
-            name: formData.get('name'),
+            nome: formData.get('name'),
             email: formData.get('email'),
-            phone: formData.get('phone'),
-            language: formData.get('language'),
-            guests: formData.get('guests'),
-            message: formData.get('message'),
+            telefono: formData.get('phone'),
+            lingua: formData.get('language'),
+            ospiti: formData.get('guests'),
+            messaggio: formData.get('message'),
             checkin: formData.get('hidden_checkin'),
             checkout: formData.get('hidden_checkout'),
-            terms: formData.get('terms') === 'on',
-            newsletter: formData.get('newsletter') === 'on',
             timestamp: new Date().toISOString()
         };
 
-        // Invia i dati al server PHP
+        // INVIO DATI ALLA WORKER (Sostituisce PHP)
         sendBookingData(bookingData);
     });
 
-    // Modal close handlers
-    if (modalClose) {
-        modalClose.addEventListener('click', function() {
-            modal.classList.remove('active');
-        });
-    }
+    // Modal Handlers
+    const closeModal = () => modal.classList.remove('active');
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+    if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+    if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-    if (modalCloseBtn) {
-        modalCloseBtn.addEventListener('click', function() {
-            modal.classList.remove('active');
-        });
-    }
-
-    // Close modal when clicking outside
-    if (modal) {
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-            }
-        });
-    }
-
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            modal.classList.remove('active');
-        }
-    });
-
-    // Phone number formatting
     const phoneInput = document.getElementById('phone');
-    if (phoneInput) {
-        phoneInput.addEventListener('input', function(e) {
-            formatPhoneNumber(e.target);
-        });
-    }
+    if (phoneInput) phoneInput.addEventListener('input', (e) => formatPhoneNumber(e.target));
 }
 
 function validateForm() {
@@ -223,15 +175,9 @@ function validateForm() {
     const requiredFields = form.querySelectorAll('[required]');
     let isValid = true;
 
-    // Reset previous error states
-    form.querySelectorAll('.error').forEach(el => {
-        el.classList.remove('error');
-    });
-    form.querySelectorAll('.error-message').forEach(el => {
-        el.remove();
-    });
+    form.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+    form.querySelectorAll('.error-message').forEach(el => el.remove());
 
-    // Validate each required field
     requiredFields.forEach(field => {
         if (!field.value.trim()) {
             markFieldAsError(field, 'Questo campo è obbligatorio');
@@ -245,7 +191,6 @@ function validateForm() {
         }
     });
 
-    // Validate terms checkbox
     const termsCheckbox = document.getElementById('terms');
     if (termsCheckbox && !termsCheckbox.checked) {
         markFieldAsError(termsCheckbox, 'Devi accettare i termini e condizioni');
@@ -257,127 +202,73 @@ function validateForm() {
 
 function markFieldAsError(field, message) {
     field.classList.add('error');
-
-    // Add error message
     const errorMessage = document.createElement('div');
     errorMessage.className = 'error-message';
     errorMessage.textContent = message;
     errorMessage.style.color = '#e53e3e';
     errorMessage.style.fontSize = '0.85rem';
     errorMessage.style.marginTop = '5px';
-
     field.parentNode.appendChild(errorMessage);
-
-    // Scroll to first error
-    if (!window.scrolledToError) {
-        field.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        window.scrolledToError = true;
-    }
 }
 
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-function isValidPhone(phone) {
-    // Basic phone validation - allows international formats
-    const phoneRegex = /^[\d\s\-\+\(\)]{10,20}$/;
-    return phoneRegex.test(phone.replace(/\s/g, ''));
-}
+function isValidEmail(email) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); }
+function isValidPhone(phone) { return /^[\d\s\-\+\(\)]{10,20}$/.test(phone.replace(/\s/g, '')); }
 
 function formatPhoneNumber(input) {
     let value = input.value.replace(/\D/g, '');
-
-    if (value.length > 0) {
-        // Format as Italian phone number if starts with 3
-        if (value.startsWith('3')) {
-            if (value.length <= 3) {
-                value = value;
-            } else if (value.length <= 6) {
-                value = value.replace(/(\d{3})(\d+)/, '$1 $2');
-            } else if (value.length <= 10) {
-                value = value.replace(/(\d{3})(\d{3})(\d+)/, '$1 $2 $3');
-            } else {
-                value = value.replace(/(\d{3})(\d{3})(\d{4})(\d+)/, '$1 $2 $3 $4');
-            }
-        }
-        // Add + for international numbers
-        if (!value.startsWith('+') && value.length > 10) {
-            value = '+' + value;
-        }
+    if (value.startsWith('3') && value.length > 3) {
+        value = value.replace(/(\d{3})(\d{3})(\d+)/, '$1 $2 $3');
     }
-
     input.value = value;
 }
 
-function showConfirmationModal(bookingData) {
+function showConfirmationModal() {
     const modal = document.getElementById('confirmation-modal');
-    if (!modal) return;
-
-    // Non modificare più il messaggio - usa quello già presente nell'HTML
-    // Il messaggio è già stato impostato: "La tua richiesta è stata inviata correttamente, verrai contattato sul tuo telefono nelle prossime ore."
-
-    // Show modal
-    modal.classList.add('active');
-
-    // Reset error scroll flag
-    window.scrolledToError = false;
+    if (modal) modal.classList.add('active');
 }
 
-// Function to send booking data to PHP server
+// --- FUNZIONE MODIFICATA PER CLOUDFLARE WORKER ---
 function sendBookingData(bookingData) {
     const form = document.getElementById('booking-form-element');
-    const modal = document.getElementById('confirmation-modal');
     const submitButton = form.querySelector('button[type="submit"]');
 
-    // Disabilita il pulsante durante l'invio
     const originalText = submitButton.textContent;
     submitButton.textContent = 'Invio in corso...';
     submitButton.disabled = true;
 
-    // Invia i dati allo script PHP
-    fetch('/api/send_booking.php', {
+    // URL della tua Cloudflare Worker
+    const workerUrl = "https://secret-courtyard-api.marco-81e.workers.dev"; 
+
+    fetch(workerUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(bookingData)
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) throw new Error('Errore di rete');
+        return response.json();
+    })
     .then(data => {
         if (data.success) {
-            console.log('Email inviata con successo:', data);
-            // Mostra la modal di conferma
-            showConfirmationModal(bookingData);
-            // Resetta il form
+            showConfirmationModal();
             form.reset();
         } else {
-            console.error('Errore nell\'invio dell\'email:', data.message);
-            alert('Si è verificato un errore nell\'invio della richiesta. Riprova più tardi.');
+            alert('Errore: ' + (data.error || 'Riprova più tardi.'));
         }
     })
     .catch(error => {
-        console.error('Errore di rete:', error);
-        alert('Errore di connessione. Riprova più tardi.');
+        console.error('Errore:', error);
+        alert('Si è verificato un errore durante l\'invio. Controlla la connessione.');
     })
     .finally(() => {
-        // Riabilita il pulsante
         submitButton.textContent = originalText;
         submitButton.disabled = false;
     });
 }
 
-// Add some basic error styling
+// Basic error styling
 const style = document.createElement('style');
-style.textContent = `
-    .error {
-        border-color: #e53e3e !important;
-        background-color: #fff5f5;
-    }
-
-    .error:focus {
-        box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1) !important;
-    }
-`;
+style.textContent = `.error { border-color: #e53e3e !important; background-color: #fff5f5; }`;
 document.head.appendChild(style);
