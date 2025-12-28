@@ -17,17 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Function to initialize lightbox
+// --- LIGHTBOX ---
 function initializeLightbox() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightbox-image');
     const lightboxCaption = document.getElementById('lightbox-caption');
     const lightboxClose = document.getElementById('lightbox-close');
 
-    if (!lightbox || !lightboxImage || !lightboxClose) {
-        console.warn('Lightbox elements not found');
-        return;
-    }
+    if (!lightbox || !lightboxImage || !lightboxClose) return;
 
     const presentationImages = document.querySelectorAll('.presentation-images .room-image');
     const courtyardImages = document.querySelectorAll('.courtyard-images .room-image');
@@ -56,7 +53,7 @@ function initializeLightbox() {
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox(); });
 }
 
-// Function to initialize gallery
+// --- GALLERY ---
 function initializeGallery() {
     const galleryIcon = document.getElementById('gallery-icon');
     const galleryButton = galleryIcon ? galleryIcon.querySelector('.gallery-button') : null;
@@ -105,7 +102,7 @@ function initializeGallery() {
     });
 }
 
-// Function to initialize calendar
+// --- CALENDAR ---
 function initializeCalendar() {
     const calendarContainer = document.getElementById('date-range-calendar');
     if (!calendarContainer) return;
@@ -172,4 +169,89 @@ function initializeCalendar() {
             grid.appendChild(el);
         }
 
-        calendarContainer.querySelector('.prev-month').addEventListener('click', () => { currentDate.set
+        calendarContainer.querySelector('.prev-month').addEventListener('click', () => { currentDate.setMonth(currentDate.getMonth() - 1); renderCalendar(); });
+        calendarContainer.querySelector('.next-month').addEventListener('click', () => { currentDate.setMonth(currentDate.getMonth() + 1); renderCalendar(); });
+    }
+    renderCalendar();
+}
+
+// --- HAMBURGER MENU ---
+function initializeHamburgerMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    if (!hamburger || !navMenu) return;
+
+    hamburger.addEventListener('click', () => {
+        const active = navMenu.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', active);
+        document.body.style.overflow = active ? 'hidden' : '';
+    });
+}
+
+// --- CONTACT FORM LOGIC (QUESTA È LA PARTE CHE TI MANCAVA) ---
+function initializeContactForm() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        
+        const contactData = {
+            nome: formData.get('name'),
+            email: formData.get('email'),
+            messaggio: formData.get('message'),
+            timestamp: new Date().toISOString()
+        };
+
+        // Chiamata alla funzione di invio
+        sendContactData(contactData);
+    });
+
+    const modal = document.getElementById('contact-confirmation-modal');
+    const closeBtn = document.getElementById('contact-modal-close');
+    const closeBtn2 = document.getElementById('contact-modal-close-btn');
+    const closeModal = () => modal.classList.remove('active');
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (closeBtn2) closeBtn2.addEventListener('click', closeModal);
+}
+
+// QUESTA È LA FUNZIONE DA VERIFICARE
+function sendContactData(contactData) {
+    const form = document.getElementById('contact-form');
+    const modal = document.getElementById('contact-confirmation-modal');
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    const originalText = submitButton.textContent;
+    submitButton.textContent = 'Invio in corso...';
+    submitButton.disabled = true;
+
+    // URL della tua Cloudflare Worker
+    const workerUrl = "https://secret-courtyard-api.marco-81e.workers.dev";
+
+    fetch(workerUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(contactData)
+    })
+    .then(response => {
+        if (!response.ok) throw new Error('Errore server');
+        return response.json();
+    })
+    .then(data => {
+        if (data.success) {
+            modal.classList.add('active');
+            form.reset();
+        } else {
+            alert('Errore nell\'invio del messaggio.');
+        }
+    })
+    .catch((error) => {
+        console.error('Errore di invio:', error);
+        alert('Errore di connessione alla Worker.');
+    })
+    .finally(() => {
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+    });
+}
