@@ -4385,6 +4385,133 @@ html {
       );
 */
 
+/* Stili per il selettore lingua */
+.language-selector {
+    position: relative;
+}
+
+.language-dropdown {
+    position: relative;
+}
+
+.language-toggle {
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.language-toggle:hover {
+    background: rgba(44, 85, 48, 0.1);
+    border-color: var(--primary-color);
+}
+
+.language-toggle:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.language-flag {
+    font-size: 1.1rem;
+}
+
+.language-current {
+    font-weight: 500;
+}
+
+.language-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 8px 0;
+    margin: 4px 0 0 0;
+    min-width: 140px;
+    display: none;
+    z-index: 1000;
+}
+
+.language-dropdown:hover .language-options,
+.language-toggle:focus + .language-options {
+    display: block;
+}
+
+.language-option {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 10px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    transition: background 0.2s ease;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.language-option:hover {
+    background: rgba(44, 85, 48, 0.1);
+}
+
+.language-option:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: -2px;
+}
+
+/* Stili per mobile */
+@media (max-width: 768px) {
+    .language-selector {
+        width: 100%;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+
+    .language-toggle {
+        width: 100%;
+        justify-content: center;
+        border-radius: 8px;
+    }
+
+    .language-options {
+        position: static;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        background: rgba(0, 0, 0, 0.02);
+        margin-top: 8px;
+        display: none;
+    }
+
+    .language-dropdown:hover .language-options,
+    .language-toggle:focus + .language-options {
+        display: block;
+    }
+
+    .language-option {
+        justify-content: center;
+        border-radius: 4px;
+        margin-bottom: 4px;
+    }
+}
+
 /* Stili per la sezione NUKI con immagine */
 .la-casa-content.nuki-section {
     display: flex !important;

@@ -239,13 +239,28 @@
                 </button>
 
                 <ul class="nav-menu" role="menubar">
-                    <li role="none"><a href="index.html" class="current-page" role="menuitem" aria-current="page">Home</a></li>
-                    <li role="none"><a href="./pages/la-casa.html" role="menuitem">La Casa</a></li>
-                    <li role="none"><a href="./pages/mobilita.html" role="menuitem">Mobilità</a></li>
-                    <li role="none"><a href="./pages/scopri-milano.html" role="menuitem">Scopri Milano</a></li>
-                    <li role="none"><a href="./pages/la-ristrutturazione.html" role="menuitem">La Ristrutturazione</a></li>
-                    <li role="none"><a href="#booking" role="menuitem">Prenota</a></li>
-                    <li role="none"><a href="#contact" role="menuitem">Contatti</a></li>
+                    <li role="none"><a href="index.html" class="current-page" role="menuitem" aria-current="page" data-i18n="nav_home">Home</a></li>
+                    <li role="none"><a href="./pages/la-casa.html" role="menuitem" data-i18n="nav_la_casa">La Casa</a></li>
+                    <li role="none"><a href="./pages/mobilita.html" role="menuitem" data-i18n="nav_mobilita">Mobilità</a></li>
+                    <li role="none"><a href="./pages/scopri-milano.html" role="menuitem" data-i18n="nav_scopri_milano">Scopri Milano</a></li>
+                    <li role="none"><a href="./pages/la-ristrutturazione.html" role="menuitem" data-i18n="nav_ristrutturazione">La Ristrutturazione</a></li>
+                    <li role="none"><a href="#booking" role="menuitem" data-i18n="nav_booking">Prenota</a></li>
+                    <li role="none"><a href="#contact" role="menuitem" data-i18n="nav_contacts">Contatti</a></li>
+
+                    <!-- Language Selector -->
+                    <li class="language-selector" role="none">
+                        <div class="language-dropdown">
+                            <button class="language-toggle" aria-label="Seleziona lingua" aria-expanded="false">
+                                <span class="language-flag">🌐</span>
+                                <span class="language-current" data-i18n="language_selector">Lingua</span>
+                            </button>
+                            <ul class="language-options">
+                                <li><button class="language-option" data-lang="it">🇮🇹 <span data-i18n="language_it">Italiano</span></button></li>
+                                <li><button class="language-option" data-lang="en">🇬🇧 <span data-i18n="language_en">English</span></button></li>
+                                <li><button class="language-option" data-lang="es">🇪🇸 <span data-i18n="language_es">Español</span></button></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -254,10 +269,10 @@
     <!-- Hero Section -->
     <section id="home" class="hero" style="background: linear-gradient(rgba(44, 85, 48, 0.3), rgba(44, 85, 48, 0.3)), url('assets/images/Home/Hero.jpg') center/cover no-repeat;">
         <div class="hero-content">
-            <h1 class="hero-title">Secret Courtyard Milano</h1>
-            <p class="hero-subtitle">Appartamento vacanze nel cuore di Milano</p>
+            <h1 class="hero-title" data-i18n="hero_title">Secret Courtyard Milano</h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">Appartamento vacanze nel cuore di Milano</p>
             <p class="hero-address">Via Lanzone 5, 20123 Milano</p>
-            <a href="#booking" class="cta-button" aria-label="Prenota il tuo soggiorno a Secret Courtyard Milano">Prenota il Tuo Soggiorno</a>
+            <a href="#booking" class="cta-button" aria-label="Prenota il tuo soggiorno a Secret Courtyard Milano" data-i18n="hero_booking_btn">Prenota il Tuo Soggiorno</a>
         </div>
     </section>
 
@@ -705,6 +720,7 @@
         </div>
     </footer>
 
+    <script src="assets/js/translations.js" defer></script>
     <script src="assets/js/main.js" defer></script>
 </body>
 </html>

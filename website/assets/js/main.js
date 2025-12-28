@@ -255,3 +255,102 @@ function sendContactData(contactData) {
         submitButton.disabled = false;
     });
 }
+
+// Funzione per cambiare lingua
+function changeLanguage(lang) {
+    // Salva la preferenza nel browser
+    localStorage.setItem('preferredLanguage', lang);
+
+    // Cambia i testi nel sito
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+
+    // Aggiorna l'attributo lang del documento HTML
+    document.documentElement.lang = lang;
+
+    // Aggiorna il testo corrente nel selettore lingua
+    const currentLangElement = document.querySelector('.language-current');
+    if (currentLangElement) {
+        if (lang === 'it') currentLangElement.textContent = 'Italiano';
+        else if (lang === 'en') currentLangElement.textContent = 'English';
+        else if (lang === 'es') currentLangElement.textContent = 'Español';
+    }
+
+    // Aggiorna la bandiera nel selettore
+    const flagElement = document.querySelector('.language-flag');
+    if (flagElement) {
+        if (lang === 'it') flagElement.textContent = '🇮🇹';
+        else if (lang === 'en') flagElement.textContent = '🇬🇧';
+        else if (lang === 'es') flagElement.textContent = '🇪🇸';
+    }
+}
+
+// Funzione per inizializzare il selettore lingua
+function initializeLanguageSelector() {
+    // Aggiungi event listener ai pulsanti di selezione lingua
+    document.querySelectorAll('.language-option').forEach(button => {
+        button.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            changeLanguage(lang);
+
+            // Chiudi il dropdown dopo la selezione (su mobile)
+            const dropdown = this.closest('.language-options');
+            if (dropdown && window.innerWidth <= 768) {
+                dropdown.style.display = 'none';
+            }
+        });
+    });
+
+    // Gestione apertura/chiusura dropdown su mobile
+    const languageToggle = document.querySelector('.language-toggle');
+    const languageOptions = document.querySelector('.language-options');
+
+    if (languageToggle && languageOptions) {
+        languageToggle.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.stopPropagation();
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+                languageOptions.style.display = isExpanded ? 'none' : 'block';
+            }
+        });
+
+        // Chiudi dropdown quando si clicca fuori (solo mobile)
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768 &&
+                !languageToggle.contains(e.target) &&
+                !languageOptions.contains(e.target)) {
+                languageToggle.setAttribute('aria-expanded', 'false');
+                languageOptions.style.display = 'none';
+            }
+        });
+    }
+
+    // Al caricamento, controlla se c'è una lingua salvata o usa l'italiano
+    const savedLang = localStorage.getItem('preferredLanguage') || 'it';
+    changeLanguage(savedLang);
+}
+
+// Aggiungi initializeLanguageSelector alla lista delle inizializzazioni
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Secret Courtyard Milano - JavaScript loaded');
+
+    // Initialize all components
+    initializeLightbox();
+    initializeGallery();
+    initializeCalendar();
+    initializeHamburgerMenu();
+    initializeContactForm();
+    initializeLanguageSelector(); // Aggiunto qui
+
+    // Check if we're on the mobility page and initialize tabs
+    if (document.querySelector('.mobility-tabs-section')) {
+        // Load mobility tabs functionality
+        console.log('Initializing mobility tabs');
+        // The mobility tabs are initialized by their own script
+    }
+});
