@@ -3600,7 +3600,8 @@ img[src*="../assets/images/La ristrutturazione/Bagno dopo.jpg"],
     }
 
     .nav-menu.active {
-        display: flex;
+        display: flex !important;
+        border: 2px solid red !important; /* DEBUG */
     }
 
     .nav-menu li {

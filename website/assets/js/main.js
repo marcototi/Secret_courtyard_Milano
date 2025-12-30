@@ -196,9 +196,10 @@ function initializeHamburgerMenu() {
 
     // Usa event listener per touch e click
     hamburger.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
+        console.log('Hamburger clicked!');
+        console.log('Current navMenu class:', navMenu.className);
         toggleMenu();
+        console.log('After toggle - navMenu class:', navMenu.className);
     });
 
     // Chiudi il menu quando si clicca su un link (solo su mobile)
