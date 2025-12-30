@@ -16,31 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.mobility-tabs-section')) {
         console.log('Initializing mobility tabs');
     }
-
-    // DEBUG: Forza apertura menu su mobile per test
-    if (window.innerWidth <= 768) {
-        console.log('Mobile detected, testing menu visibility...');
-        setTimeout(() => {
-            const navMenu = document.querySelector('.nav-menu');
-            const hamburger = document.querySelector('.hamburger');
-            if (navMenu && hamburger) {
-                console.log('TEST: Forcing menu open for 3 seconds');
-                navMenu.classList.add('active');
-                hamburger.setAttribute('aria-expanded', 'true');
-                hamburger.classList.add('active');
-                document.body.style.overflow = 'hidden';
-
-                // Chiudi dopo 3 secondi
-                setTimeout(() => {
-                    navMenu.classList.remove('active');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                    hamburger.classList.remove('active');
-                    document.body.style.overflow = '';
-                    console.log('TEST: Menu closed');
-                }, 3000);
-            }
-        }, 1000);
-    }
 });
 
 // --- LIGHTBOX ---
@@ -222,10 +197,7 @@ function initializeHamburgerMenu() {
 
     // Usa event listener per touch e click
     hamburger.addEventListener('click', function(e) {
-        console.log('Hamburger clicked!');
-        console.log('Current navMenu class:', navMenu.className);
         toggleMenu();
-        console.log('After toggle - navMenu class:', navMenu.className);
     });
 
     // Chiudi il menu quando si clicca su un link (solo su mobile)
