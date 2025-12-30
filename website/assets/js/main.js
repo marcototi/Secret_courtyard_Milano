@@ -185,30 +185,48 @@ function initializeHamburgerMenu() {
         const active = navMenu.classList.toggle('active');
         hamburger.setAttribute('aria-expanded', active);
         document.body.style.overflow = active ? 'hidden' : '';
+
+        // Aggiungi/rimuovi classe per animazione hamburger
+        if (active) {
+            hamburger.classList.add('active');
+        } else {
+            hamburger.classList.remove('active');
+        }
     };
 
-    hamburger.addEventListener('click', toggleMenu);
+    // Usa event listener per touch e click
+    hamburger.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleMenu();
+    });
 
     // Chiudi il menu quando si clicca su un link (solo su mobile)
-    if (window.innerWidth <= 768) {
-        const navLinks = document.querySelectorAll('.nav-menu a:not(.language-toggle)');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (navMenu.classList.contains('active')) {
-                    toggleMenu();
-                }
-            });
-        });
-
-        // Chiudi il menu quando si clicca fuori
-        document.addEventListener('click', (e) => {
-            if (navMenu.classList.contains('active') &&
-                !navMenu.contains(e.target) &&
-                !hamburger.contains(e.target)) {
+    const navLinks = document.querySelectorAll('.nav-menu a:not(.language-toggle)');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu.classList.contains('active')) {
                 toggleMenu();
             }
         });
-    }
+    });
+
+    // Chiudi il menu quando si clicca fuori (solo su mobile)
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 &&
+            navMenu.classList.contains('active') &&
+            !navMenu.contains(e.target) &&
+            !hamburger.contains(e.target)) {
+            toggleMenu();
+        }
+    });
+
+    // Chiudi il menu con tasto ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
 }
 
 // --- CONTACT FORM LOGIC (QUESTA È LA PARTE CHE TI MANCAVA) ---
