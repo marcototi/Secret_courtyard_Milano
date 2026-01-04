@@ -411,11 +411,12 @@ function initializeLanguageSelector() {
         });
     });
 
-    // Gestione apertura/chiusura dropdown su mobile
+    // Gestione apertura/chiusura dropdown
     const languageToggle = document.querySelector('.language-toggle');
     const languageOptions = document.querySelector('.language-options');
 
     if (languageToggle && languageOptions) {
+        // Su mobile: click per aprire/chiudere
         languageToggle.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
                 e.stopPropagation();
@@ -424,6 +425,20 @@ function initializeLanguageSelector() {
                 languageOptions.style.display = isExpanded ? 'none' : 'block';
             }
         });
+
+        // Su desktop: mouseover per aprire, mouseleave per chiudere
+        if (window.innerWidth > 768) {
+            languageToggle.addEventListener('mouseenter', function() {
+                languageOptions.style.display = 'block';
+            });
+
+            const languageContainer = languageToggle.closest('.language-selector') || languageToggle.parentElement;
+            if (languageContainer) {
+                languageContainer.addEventListener('mouseleave', function() {
+                    languageOptions.style.display = 'none';
+                });
+            }
+        }
 
         // Chiudi dropdown quando si clicca fuori (solo mobile)
         document.addEventListener('click', function(e) {

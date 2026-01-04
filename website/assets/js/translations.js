@@ -123,7 +123,31 @@ const translations = {
         "casa_rules_title": "📜 Regole della casa",
         "casa_rules_text": "• Vietato fumare<br>• Vietato organizzare feste<br>• Vietato portare animali<br>• Silenzio dalle 22:00 alle 8:00",
         "casa_contact_title": "📞 Contatti",
-        "casa_contact_text": "Per qualsiasi necessità durante il soggiorno, contattami al numero +39 3664162554 o scrivimi su WhatsApp!"
+        "casa_contact_text": "Per qualsiasi necessità durante il soggiorno, contattami al numero +39 3664162554 o scrivimi su WhatsApp!",
+
+        // Pagina Mobilità
+        "mobilita_hero_title": "Mobilità",
+        "mobilita_hero_subtitle": "Come raggiungere l'appartamento e muoversi a Milano",
+        "mobilita_hero_address": "Via Lanzone 5, 20123 Milano",
+        "mobilita_tab_airports": "✈️ Aeroporti",
+        "mobilita_tab_stations": "🚆 Stazioni",
+        "mobilita_tab_parking": "🚗 Parcheggio",
+        "mobilita_tab_public": "🚇 Mezzi Pubblici",
+
+        // Pagina Scopri Milano
+        "scopri_hero_title": "Scopri Milano",
+        "scopri_hero_subtitle": "Qui troverai un consiglio per ogni tua esigenza",
+        "scopri_hero_address": "Via Lanzone 5, 20123 Milano",
+        "scopri_attractions_title": "🚶‍♂️ Principali Attrazioni Raggiungibili a Piedi",
+        "scopri_restaurants_title": "👨‍🍳 Ristoranti",
+        "scopri_pizza_title": "🍕 Pizza",
+        "scopri_milanese_title": "🍝 Milanese",
+        "scopri_international_title": "🌍 Internazionale",
+        "scopri_aperitivo_title": "🍸 Aperitivo",
+        "scopri_gelato_title": "🍦 Gelato",
+        "scopri_coffee_title": "☕ Caffè",
+        "scopri_markets_title": "🛒 Mercati",
+        "scopri_supermarkets_title": "🏪 Supermercati"
     },
 
     en: {
@@ -247,7 +271,31 @@ const translations = {
         "casa_rules_title": "📜 House rules",
         "casa_rules_text": "• No smoking<br>• No parties<br>• No pets<br>• Quiet from 10:00 PM to 8:00 AM",
         "casa_contact_title": "📞 Contacts",
-        "casa_contact_text": "For any needs during your stay, contact me at +39 3664162554 or write me on WhatsApp!"
+        "casa_contact_text": "For any needs during your stay, contact me at +39 3664162554 or write me on WhatsApp!",
+
+        // Page Mobility
+        "mobilita_hero_title": "Mobility",
+        "mobilita_hero_subtitle": "How to reach the apartment and move around Milan",
+        "mobilita_hero_address": "Via Lanzone 5, 20123 Milan",
+        "mobilita_tab_airports": "✈️ Airports",
+        "mobilita_tab_stations": "🚆 Train Stations",
+        "mobilita_tab_parking": "🚗 Parking",
+        "mobilita_tab_public": "🚇 Public Transport",
+
+        // Page Discover Milan
+        "scopri_hero_title": "Discover Milan",
+        "scopri_hero_subtitle": "Here you'll find a recommendation for every need",
+        "scopri_hero_address": "Via Lanzone 5, 20123 Milan",
+        "scopri_attractions_title": "🚶‍♂️ Main Attractions Reachable on Foot",
+        "scopri_restaurants_title": "👨‍🍳 Restaurants",
+        "scopri_pizza_title": "🍕 Pizza",
+        "scopri_milanese_title": "🍝 Milanese",
+        "scopri_international_title": "🌍 International",
+        "scopri_aperitivo_title": "🍸 Aperitif",
+        "scopri_gelato_title": "🍦 Ice Cream",
+        "scopri_coffee_title": "☕ Coffee",
+        "scopri_markets_title": "🛒 Markets",
+        "scopri_supermarkets_title": "🏪 Supermarkets"
     },
 
     es: {
@@ -371,6 +419,30 @@ const translations = {
         "casa_rules_title": "📜 Reglas de la casa",
         "casa_rules_text": "• Prohibido fumar<br>• Prohibido organizar fiestas<br>• Prohibido llevar animales<br>• Silencio de 22:00 a 8:00",
         "casa_contact_title": "📞 Contactos",
-        "casa_contact_text": "Para cualquier necesidad durante tu estancia, contáctame al +39 3664162554 o escríbeme por WhatsApp!"
+        "casa_contact_text": "Para cualquier necesidad durante tu estancia, contáctame al +39 3664162554 o escríbeme por WhatsApp!",
+
+        // Página Movilidad
+        "mobilita_hero_title": "Movilidad",
+        "mobilita_hero_subtitle": "Cómo llegar al apartamento y moverse por Milán",
+        "mobilita_hero_address": "Via Lanzone 5, 20123 Milán",
+        "mobilita_tab_airports": "✈️ Aeropuertos",
+        "mobilita_tab_stations": "🚆 Estaciones",
+        "mobilita_tab_parking": "🚗 Aparcamiento",
+        "mobilita_tab_public": "🚇 Transporte Público",
+
+        // Página Descubre Milán
+        "scopri_hero_title": "Descubre Milán",
+        "scopri_hero_subtitle": "Aquí encontrarás una recomendación para cada necesidad",
+        "scopri_hero_address": "Via Lanzone 5, 20123 Milán",
+        "scopri_attractions_title": "🚶‍♂️ Principales Atracciones Alcanzables a Pie",
+        "scopri_restaurants_title": "👨‍🍳 Restaurantes",
+        "scopri_pizza_title": "🍕 Pizza",
+        "scopri_milanese_title": "🍝 Milanesa",
+        "scopri_international_title": "🌍 Internacional",
+        "scopri_aperitivo_title": "🍸 Aperitivo",
+        "scopri_gelato_title": "🍦 Helado",
+        "scopri_coffee_title": "☕ Café",
+        "scopri_markets_title": "🛒 Mercados",
+        "scopri_supermarkets_title": "🏪 Supermercados"
     }
 };
