@@ -302,29 +302,40 @@ function changeLanguage(lang) {
     localStorage.setItem('preferredLanguage', lang);
 
     // Cambia i testi nel sito
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        let translation = null;
+    try {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            try {
+                const key = element.getAttribute('data-i18n');
+                if (!key) return;
 
-        // Cerca la traduzione nella lingua corrente
-        if (translations[lang] && translations[lang][key]) {
-            translation = translations[lang][key];
-        }
-        // Fallback: per chiavi automatiche, mantieni il testo originale
-        else if (key.startsWith('auto_')) {
-            // Per chiavi automatiche, mantieni il testo originale come fallback
-            translation = element.textContent || element.innerHTML;
-        }
+                let translation = null;
 
-        if (translation) {
-            // Usa innerHTML se il testo contiene HTML, altrimenti textContent
-            if (translation.includes('<') && translation.includes('>')) {
-                element.innerHTML = translation;
-            } else {
-                element.textContent = translation;
+                // Cerca la traduzione nella lingua corrente
+                if (translations[lang] && translations[lang][key]) {
+                    translation = translations[lang][key];
+                }
+                // Fallback: per chiavi automatiche, mantieni il testo originale
+                else if (key.startsWith('auto_')) {
+                    // Per chiavi automatiche, mantieni il testo originale come fallback
+                    translation = element.textContent || element.innerHTML;
+                }
+
+                if (translation) {
+                    // Usa innerHTML se il testo contiene HTML, altrimenti textContent
+                    if (translation.includes('<') && translation.includes('>')) {
+                        element.innerHTML = translation;
+                    } else {
+                        element.textContent = translation;
+                    }
+                }
+            } catch (elementError) {
+                console.warn('Errore nella traduzione elemento:', element, elementError);
+                // Continua con gli altri elementi
             }
-        }
-    });
+        });
+    } catch (error) {
+        console.error('Errore nel cambio lingua:', error);
+    }
 
     // Aggiorna l'attributo lang del documento HTML
     document.documentElement.lang = lang;
@@ -383,7 +394,8 @@ function autoApplyI18nAttributes() {
 // Funzione per inizializzare il selettore lingua
 function initializeLanguageSelector() {
     // Applica attributi i18n automaticamente agli elementi comuni PRIMA di cambiare lingua
-    autoApplyI18nAttributes();
+    // DISABILITATO TEMPORANEAMENTE PER RISOLVERE PROBLEMI
+    // autoApplyI18nAttributes();
 
     // Aggiungi event listener ai pulsanti di selezione lingua
     document.querySelectorAll('.language-option').forEach(button => {

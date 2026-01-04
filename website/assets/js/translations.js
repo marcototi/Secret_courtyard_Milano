@@ -59,6 +59,7 @@ const translations = {
         "language_selector": "Lingua",
         "language_it": "Italiano",
         "language_en": "English",
+        "language_es": "Español",
 
         // Messaggi comuni
         "loading": "Caricamento...",
@@ -182,6 +183,7 @@ const translations = {
         "language_selector": "Language",
         "language_it": "Italiano",
         "language_en": "English",
+        "language_es": "Español",
 
         // Common messages
         "loading": "Loading...",
