@@ -314,9 +314,9 @@ function changeLanguage(lang) {
                 if (translations[lang] && translations[lang][key]) {
                     translation = translations[lang][key];
                 }
-                // Fallback: per chiavi automatiche, mantieni il testo originale
-                else if (key.startsWith('auto_')) {
-                    // Per chiavi automatiche, mantieni il testo originale come fallback
+                // Fallback: per chiavi automatiche o dinamiche, mantieni il testo originale
+                else if (key.startsWith('auto_') || key.startsWith('page_')) {
+                    // Per chiavi automatiche/dinamiche, mantieni il testo originale come fallback
                     translation = element.textContent || element.innerHTML;
                 }
 
@@ -355,7 +355,68 @@ function changeLanguage(lang) {
     }
 }
 
-// Funzione per aiutare ad applicare attributi data-i18n automaticamente
+// Funzione professionale per applicare traduzioni complete a tutto il sito
+function applyComprehensiveI18n() {
+    console.log('Applying comprehensive i18n to all text elements');
+
+    // Elementi che DEVONO essere tradotti (priorità alta)
+    const highPrioritySelectors = [
+        'h1:not([data-i18n])',
+        'h2:not([data-i18n])',
+        'h3:not([data-i18n])',
+        'h4:not([data-i18n])',
+        '.hero-title:not([data-i18n])',
+        '.hero-subtitle:not([data-i18n])',
+        '.hero-address:not([data-i18n])',
+        '.section-title:not([data-i18n])',
+        '.cta-button:not([data-i18n])'
+    ];
+
+    // Elementi che DOVREBBERO essere tradotti (priorità media)
+    const mediumPrioritySelectors = [
+        'p:not([data-i18n]):not(.image-label):not(.map-note)',
+        'li:not([data-i18n])',
+        '.card-title:not([data-i18n])',
+        '.card-text:not([data-i18n])',
+        '.attraction-item h4:not([data-i18n])',
+        '.attraction-item p:not([data-i18n])',
+        '.restaurant-item h4:not([data-i18n])',
+        '.restaurant-item p:not([data-i18n])'
+    ];
+
+    // Funzione per applicare attributi a un set di selettori
+    function applyI18nToSelectors(selectors, priority) {
+        selectors.forEach(selector => {
+            document.querySelectorAll(selector).forEach((element, index) => {
+                const text = element.textContent.trim();
+                if (text && text.length > 0 && text.length < 200) {
+                    // Crea una chiave unica basata su contenuto, selettore e posizione
+                    const safeText = text.replace(/[^a-zA-Z0-9\s]/g, '');
+                    const baseKey = safeText.toLowerCase()
+                        .replace(/\s+/g, '_')
+                        .substring(0, 40);
+
+                    const positionKey = `_${index}`;
+                    const selectorKey = selector.replace(/[^a-zA-Z0-9]/g, '_').substring(0, 20);
+                    const key = `page_${priority}_${selectorKey}_${baseKey}${positionKey}`;
+
+                    if (key.length > 5) {
+                        element.setAttribute('data-i18n', key);
+                        console.log(`Applied i18n key to element: ${key} = "${text.substring(0, 50)}..."`);
+                    }
+                }
+            });
+        });
+    }
+
+    // Applica prima le priorità alte, poi le medie
+    applyI18nToSelectors(highPrioritySelectors, 'high');
+    applyI18nToSelectors(mediumPrioritySelectors, 'medium');
+
+    console.log('Comprehensive i18n application complete');
+}
+
+// Funzione per aiutare ad applicare attributi data-i18n automaticamente (legacy)
 function autoApplyI18nAttributes() {
     // Elementi comuni che dovrebbero essere tradotti
     const selectors = [
@@ -394,8 +455,7 @@ function autoApplyI18nAttributes() {
 // Funzione per inizializzare il selettore lingua
 function initializeLanguageSelector() {
     // Applica attributi i18n automaticamente agli elementi comuni PRIMA di cambiare lingua
-    // DISABILITATO TEMPORANEAMENTE PER RISOLVERE PROBLEMI
-    // autoApplyI18nAttributes();
+    applyComprehensiveI18n();
 
     // Aggiungi event listener ai pulsanti di selezione lingua
     document.querySelectorAll('.language-option').forEach(button => {
@@ -428,15 +488,22 @@ function initializeLanguageSelector() {
 
         // Su desktop: mouseover per aprire, mouseleave per chiudere
         if (window.innerWidth > 768) {
+            console.log('Desktop detected, setting up mouseover for language selector');
+
             languageToggle.addEventListener('mouseenter', function() {
+                console.log('Mouse entered language toggle, opening dropdown');
                 languageOptions.style.display = 'block';
             });
 
             const languageContainer = languageToggle.closest('.language-selector') || languageToggle.parentElement;
             if (languageContainer) {
+                console.log('Language container found:', languageContainer);
                 languageContainer.addEventListener('mouseleave', function() {
+                    console.log('Mouse left language container, closing dropdown');
                     languageOptions.style.display = 'none';
                 });
+            } else {
+                console.warn('Language container not found for mouseleave');
             }
         }
 
