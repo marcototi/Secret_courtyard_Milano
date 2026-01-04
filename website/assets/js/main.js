@@ -304,8 +304,25 @@ function changeLanguage(lang) {
     // Cambia i testi nel sito
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
+        let translation = null;
+
+        // Cerca la traduzione nella lingua corrente
         if (translations[lang] && translations[lang][key]) {
-            element.textContent = translations[lang][key];
+            translation = translations[lang][key];
+        }
+        // Fallback: per chiavi automatiche, mantieni il testo originale
+        else if (key.startsWith('auto_')) {
+            // Per chiavi automatiche, mantieni il testo originale come fallback
+            translation = element.textContent || element.innerHTML;
+        }
+
+        if (translation) {
+            // Usa innerHTML se il testo contiene HTML, altrimenti textContent
+            if (translation.includes('<') && translation.includes('>')) {
+                element.innerHTML = translation;
+            } else {
+                element.textContent = translation;
+            }
         }
     });
 
@@ -314,10 +331,8 @@ function changeLanguage(lang) {
 
     // Aggiorna il testo corrente nel selettore lingua
     const currentLangElement = document.querySelector('.language-current');
-    if (currentLangElement) {
-        if (lang === 'it') currentLangElement.textContent = 'Italiano';
-        else if (lang === 'en') currentLangElement.textContent = 'English';
-        else if (lang === 'es') currentLangElement.textContent = 'Español';
+    if (currentLangElement && translations[lang] && translations[lang]['language_' + lang]) {
+        currentLangElement.textContent = translations[lang]['language_' + lang];
     }
 
     // Aggiorna la bandiera nel selettore
@@ -329,8 +344,47 @@ function changeLanguage(lang) {
     }
 }
 
+// Funzione per aiutare ad applicare attributi data-i18n automaticamente
+function autoApplyI18nAttributes() {
+    // Elementi comuni che dovrebbero essere tradotti
+    const selectors = [
+        'h1:not([data-i18n])',
+        'h2:not([data-i18n])',
+        'h3:not([data-i18n])',
+        'h4:not([data-i18n])',
+        '.section-title:not([data-i18n])',
+        '.hero-subtitle:not([data-i18n])',
+        '.cta-button:not([data-i18n])',
+        'p:not([data-i18n])',
+        'li:not([data-i18n])',
+        '.card-title:not([data-i18n])',
+        '.card-text:not([data-i18n])'
+    ];
+
+    selectors.forEach(selector => {
+        document.querySelectorAll(selector).forEach(element => {
+            // Crea una chiave basata sul testo e sulla posizione
+            const text = element.textContent.trim();
+            if (text && text.length > 0 && text.length < 100) {
+                // Crea una chiave semplice dal testo
+                const key = text.toLowerCase()
+                    .replace(/[^a-z0-9\s]/g, '')
+                    .replace(/\s+/g, '_')
+                    .substring(0, 50);
+
+                if (key && key.length > 3) {
+                    element.setAttribute('data-i18n', 'auto_' + key);
+                }
+            }
+        });
+    });
+}
+
 // Funzione per inizializzare il selettore lingua
 function initializeLanguageSelector() {
+    // Applica attributi i18n automaticamente agli elementi comuni PRIMA di cambiare lingua
+    autoApplyI18nAttributes();
+
     // Aggiungi event listener ai pulsanti di selezione lingua
     document.querySelectorAll('.language-option').forEach(button => {
         button.addEventListener('click', function() {
